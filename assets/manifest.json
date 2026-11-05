@@ -1,0 +1,578 @@
+[
+  {
+    "id": 1,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.00 PM (1).jpeg",
+    "filename": "project_event_01.jpeg",
+    "src": "assets/images/project_event_01.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 2,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.00 PM (2).jpeg",
+    "filename": "project_event_02.jpeg",
+    "src": "assets/images/project_event_02.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 3,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.00 PM.jpeg",
+    "filename": "project_event_03.jpeg",
+    "src": "assets/images/project_event_03.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 4,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.01 PM (1).jpeg",
+    "filename": "project_event_04.jpeg",
+    "src": "assets/images/project_event_04.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 5,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.01 PM.jpeg",
+    "filename": "project_event_05.jpeg",
+    "src": "assets/images/project_event_05.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 6,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.02 PM (1).jpeg",
+    "filename": "project_event_06.jpeg",
+    "src": "assets/images/project_event_06.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 7,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.02 PM (2).jpeg",
+    "filename": "project_event_07.jpeg",
+    "src": "assets/images/project_event_07.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 8,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.02 PM.jpeg",
+    "filename": "project_event_08.jpeg",
+    "src": "assets/images/project_event_08.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 9,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.03 PM (1).jpeg",
+    "filename": "project_event_09.jpeg",
+    "src": "assets/images/project_event_09.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 10,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.03 PM.jpeg",
+    "filename": "project_event_10.jpeg",
+    "src": "assets/images/project_event_10.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 11,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.04 PM.jpeg",
+    "filename": "project_event_11.jpeg",
+    "src": "assets/images/project_event_11.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 12,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.05 PM (1).jpeg",
+    "filename": "project_event_12.jpeg",
+    "src": "assets/images/project_event_12.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 13,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.05 PM (2).jpeg",
+    "filename": "project_event_13.jpeg",
+    "src": "assets/images/project_event_13.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 14,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.05 PM.jpeg",
+    "filename": "project_event_14.jpeg",
+    "src": "assets/images/project_event_14.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 15,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.06 PM (1).jpeg",
+    "filename": "project_event_15.jpeg",
+    "src": "assets/images/project_event_15.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 16,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.06 PM.jpeg",
+    "filename": "project_event_16.jpeg",
+    "src": "assets/images/project_event_16.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 17,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.07 PM.jpeg",
+    "filename": "project_event_17.jpeg",
+    "src": "assets/images/project_event_17.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 18,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.09 PM.jpeg",
+    "filename": "project_event_18.jpeg",
+    "src": "assets/images/project_event_18.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 19,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.18 PM.jpeg",
+    "filename": "project_event_19.jpeg",
+    "src": "assets/images/project_event_19.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 20,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.20 PM.jpeg",
+    "filename": "project_event_20.jpeg",
+    "src": "assets/images/project_event_20.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 21,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.21 PM.jpeg",
+    "filename": "project_event_21.jpeg",
+    "src": "assets/images/project_event_21.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 22,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.22 PM.jpeg",
+    "filename": "project_event_22.jpeg",
+    "src": "assets/images/project_event_22.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 23,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.23 PM.jpeg",
+    "filename": "project_event_23.jpeg",
+    "src": "assets/images/project_event_23.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 24,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.24 PM.jpeg",
+    "filename": "project_event_24.jpeg",
+    "src": "assets/images/project_event_24.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 25,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.26 PM.jpeg",
+    "filename": "project_event_25.jpeg",
+    "src": "assets/images/project_event_25.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 26,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.33 PM.jpeg",
+    "filename": "project_event_26.jpeg",
+    "src": "assets/images/project_event_26.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 27,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.34 PM.jpeg",
+    "filename": "project_event_27.jpeg",
+    "src": "assets/images/project_event_27.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 28,
+    "original": "WhatsApp Image 2026-10-22 at 6.24.35 PM.jpeg",
+    "filename": "project_event_28.jpeg",
+    "src": "assets/images/project_event_28.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 29,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.40 PM (1).jpeg",
+    "filename": "project_event_29.jpeg",
+    "src": "assets/images/project_event_29.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 30,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.40 PM.jpeg",
+    "filename": "project_event_30.jpeg",
+    "src": "assets/images/project_event_30.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 31,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.41 PM (1).jpeg",
+    "filename": "project_event_31.jpeg",
+    "src": "assets/images/project_event_31.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 32,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.41 PM (2).jpeg",
+    "filename": "project_event_32.jpeg",
+    "src": "assets/images/project_event_32.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 33,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.41 PM.jpeg",
+    "filename": "project_event_33.jpeg",
+    "src": "assets/images/project_event_33.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 34,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.42 PM (1).jpeg",
+    "filename": "project_event_34.jpeg",
+    "src": "assets/images/project_event_34.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 35,
+    "original": "WhatsApp Image 2026-10-22 at 6.25.42 PM.jpeg",
+    "filename": "project_event_35.jpeg",
+    "src": "assets/images/project_event_35.jpeg",
+    "category": "event",
+    "categoryLabelEn": "Illuminated Events & LED Stages",
+    "categoryLabelAr": "بيئات الفعاليات وشاشات العرض"
+  },
+  {
+    "id": 36,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.33 AM (1).jpeg",
+    "filename": "project_signage_36.jpeg",
+    "src": "assets/images/project_signage_36.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 37,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.33 AM.jpeg",
+    "filename": "project_signage_37.jpeg",
+    "src": "assets/images/project_signage_37.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 38,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.34 AM.jpeg",
+    "filename": "project_signage_38.jpeg",
+    "src": "assets/images/project_signage_38.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 39,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.35 AM (1).jpeg",
+    "filename": "project_signage_39.jpeg",
+    "src": "assets/images/project_signage_39.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 40,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.35 AM.jpeg",
+    "filename": "project_signage_40.jpeg",
+    "src": "assets/images/project_signage_40.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 41,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.36 AM (1).jpeg",
+    "filename": "project_signage_41.jpeg",
+    "src": "assets/images/project_signage_41.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 42,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.36 AM.jpeg",
+    "filename": "project_signage_42.jpeg",
+    "src": "assets/images/project_signage_42.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 43,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.37 AM.jpeg",
+    "filename": "project_signage_43.jpeg",
+    "src": "assets/images/project_signage_43.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 44,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.38 AM (1).jpeg",
+    "filename": "project_signage_44.jpeg",
+    "src": "assets/images/project_signage_44.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 45,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.38 AM.jpeg",
+    "filename": "project_signage_45.jpeg",
+    "src": "assets/images/project_signage_45.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 46,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.39 AM (1).jpeg",
+    "filename": "project_signage_46.jpeg",
+    "src": "assets/images/project_signage_46.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 47,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.39 AM.jpeg",
+    "filename": "project_signage_47.jpeg",
+    "src": "assets/images/project_signage_47.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 48,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.40 AM (1).jpeg",
+    "filename": "project_signage_48.jpeg",
+    "src": "assets/images/project_signage_48.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 49,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.40 AM.jpeg",
+    "filename": "project_signage_49.jpeg",
+    "src": "assets/images/project_signage_49.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 50,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.41 AM (1).jpeg",
+    "filename": "project_signage_50.jpeg",
+    "src": "assets/images/project_signage_50.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 51,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.41 AM (2).jpeg",
+    "filename": "project_signage_51.jpeg",
+    "src": "assets/images/project_signage_51.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 52,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.41 AM.jpeg",
+    "filename": "project_signage_52.jpeg",
+    "src": "assets/images/project_signage_52.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 53,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.42 AM.jpeg",
+    "filename": "project_signage_53.jpeg",
+    "src": "assets/images/project_signage_53.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 54,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.43 AM (1).jpeg",
+    "filename": "project_signage_54.jpeg",
+    "src": "assets/images/project_signage_54.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 55,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.43 AM.jpeg",
+    "filename": "project_signage_55.jpeg",
+    "src": "assets/images/project_signage_55.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 56,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.44 AM (1).jpeg",
+    "filename": "project_signage_56.jpeg",
+    "src": "assets/images/project_signage_56.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 57,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.44 AM.jpeg",
+    "filename": "project_signage_57.jpeg",
+    "src": "assets/images/project_signage_57.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 58,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.45 AM (1).jpeg",
+    "filename": "project_signage_58.jpeg",
+    "src": "assets/images/project_signage_58.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 59,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.45 AM.jpeg",
+    "filename": "project_signage_59.jpeg",
+    "src": "assets/images/project_signage_59.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 60,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.46 AM (1).jpeg",
+    "filename": "project_signage_60.jpeg",
+    "src": "assets/images/project_signage_60.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 61,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.46 AM.jpeg",
+    "filename": "project_signage_61.jpeg",
+    "src": "assets/images/project_signage_61.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 62,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.47 AM.jpeg",
+    "filename": "project_signage_62.jpeg",
+    "src": "assets/images/project_signage_62.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 63,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.48 AM (1).jpeg",
+    "filename": "project_signage_63.jpeg",
+    "src": "assets/images/project_signage_63.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  },
+  {
+    "id": 64,
+    "original": "WhatsApp Image 2026-10-23 at 9.15.48 AM.jpeg",
+    "filename": "project_signage_64.jpeg",
+    "src": "assets/images/project_signage_64.jpeg",
+    "category": "signage",
+    "categoryLabelEn": "Architectural & Retail Signage",
+    "categoryLabelAr": "اللوحات المعمارية والتجارية"
+  }
+]
