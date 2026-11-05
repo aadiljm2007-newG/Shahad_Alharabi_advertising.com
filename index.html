@@ -17,20 +17,20 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#08140C',
-            charcoal: '#0D2015',
-            emeraldDeep: '#0A1C11',
-            emeraldRoyal: '#0D2818',
+            obsidian: '#070B08',
+            charcoal: '#0F1611',
+            emeraldDeep: '#0A140D',
+            emeraldRoyal: '#0D1E13',
             gold: {
-              300: '#EBD8B8',
-              400: '#CDB179',
-              500: '#B08D44',
-              600: '#917130',
-              700: '#6E521E'
+              300: '#E6D7BD',
+              400: '#D4BF97',
+              500: '#C5A869',
+              600: '#A68846',
+              700: '#7E632B'
             },
-            ivory: '#D8C5B0',
-            cashmere: '#B5A593',
-            umber: '#2E1F0D'
+            ivory: '#EAE5DC',
+            cashmere: '#A9A49A',
+            umber: '#1F1810'
           },
           fontFamily: {
             cinzel: ['"Cormorant Garamond"', 'Cinzel', 'serif'],
@@ -46,10 +46,10 @@
 <style>
     /* Custom Scrollbar & Variables */
     :root {
-      --gold-primary: #B08D44;
-      --gold-bright: #EBD8B8;
-      --bg-dark: #0A1C11;
-      --font-display: 'Cormorant Garamond', 'Cinzel', serif;
+      --gold-primary: #C5A869;
+      --gold-bright: #E6D7BD;
+      --bg-dark: #070B08;
+      --font-display: 'Cormorant Garamond', serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
     }
 
@@ -60,93 +60,85 @@
     }
 
     body {
-      background-color: #0A1C11;
-      color: #D8C5B0;
+      background-color: #070B08;
+      color: #EAE5DC;
       font-family: var(--font-body);
       overflow-x: hidden;
-      selection-background-color: #B08D44;
-      selection-color: #000;
+      selection-background-color: #C5A869;
+      selection-color: #070B08;
+      letter-spacing: -0.01em;
     }
 
-    /* Architectural Najdi Pattern Background (Subtle overlay) */
+    /* Architectural Najdi Pattern Background (Subtle micro-grid) */
     .najdi-pattern {
-      background-image: radial-gradient(rgba(176, 141, 68, 0.12) 1px, transparent 1px),
-                        radial-gradient(rgba(176, 141, 68, 0.05) 1px, transparent 1px);
-      background-size: 36px 36px;
-      background-position: 0 0, 18px 18px;
+      background-image: radial-gradient(rgba(197, 168, 105, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+      background-position: 0 0;
     }
 
-    /* Tactile Pull Cord Animations */
-    .cord-line {
-      stroke: url(#cordGrad);
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
+    /* Refined Architectural Borders & Depth */
+    .hairline-gold {
+      border: 1px solid rgba(197, 168, 105, 0.16);
     }
-    
-    .spring-bounce {
-      transition: transform 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    .hairline-gold-hover:hover {
+      border-color: rgba(197, 168, 105, 0.45);
     }
 
-    /* Ambient Gold Glows */
     .gold-glow {
-      box-shadow: 0 0 35px -5px rgba(176, 141, 68, 0.35);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(197, 168, 105, 0.15);
     }
     .gold-glow-lg {
-      box-shadow: 0 0 70px -10px rgba(176, 141, 68, 0.45);
+      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), 0 0 40px -10px rgba(197, 168, 105, 0.2);
     }
+
     .gold-border {
-      border: 1px solid rgba(176, 141, 68, 0.35);
+      border: 1px solid rgba(197, 168, 105, 0.2);
     }
     .gold-border:hover {
-      border-color: rgba(176, 141, 68, 0.8);
+      border-color: rgba(197, 168, 105, 0.5);
     }
 
-    /* Radial Flash Dissolve */
-    #lightFlash {
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.5s ease-out;
-    }
-
+    /* Chamber Entrance Fade */
     #darkChamber {
-      transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease-in-out;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     #darkChamber.chamber-open {
       opacity: 0;
       pointer-events: none;
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
-    /* Glassmorphism */
+    /* Glassmorphism Navigation */
     .glass-nav {
-      background: rgba(10, 28, 17, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(176, 141, 68, 0.22);
+      background: rgba(7, 11, 8, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(197, 168, 105, 0.14);
     }
 
-    /* Gold Gradient Text */
+    /* Refined Champagne Gradient Text */
     .text-gold-gradient {
-      background: linear-gradient(135deg, #F3E5AB 0%, #B08D44 50%, #7A5B20 100%);
+      background: linear-gradient(135deg, #F0E6D2 0%, #C5A869 60%, #9E834D 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Luxury Bevel */
+    /* Luxury Architectural Card */
     .luxury-card {
-      background: linear-gradient(160deg, rgba(13, 32, 21, 0.9) 0%, rgba(8, 20, 12, 0.96) 100%);
-      box-shadow: inset 0 1px 0 rgba(235, 216, 184, 0.08), 0 20px 40px -15px rgba(0,0,0,0.9);
-      border: 1px solid rgba(176, 141, 68, 0.28);
+      background: linear-gradient(180deg, rgba(15, 22, 17, 0.75) 0%, rgba(9, 14, 10, 0.9) 100%);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(197, 168, 105, 0.16);
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
     .luxury-card:hover {
-      border-color: rgba(176, 141, 68, 0.65);
-      box-shadow: inset 0 1px 0 rgba(235, 216, 184, 0.15), 0 25px 50px -10px rgba(176, 141, 68, 0.25);
+      border-color: rgba(197, 168, 105, 0.4);
+      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.9), 0 0 30px -10px rgba(197, 168, 105, 0.12);
     }
 
-    /* Elegant Serif Heading styling */
+    /* Editorial Serif Headings */
     h1, h2, h3, .font-cinzel {
-      letter-spacing: 0.03em;
+      letter-spacing: 0.015em;
+      font-feature-settings: "cv01" on, "cv02" on;
     }
 
     /* Royal portfolio card badge */
@@ -306,95 +298,49 @@
 </head>
 <body class="bg-obsidian text-ivory antialiased selection:bg-gold-500 selection:text-black">
 <!-- ======================================================= -->
-<!-- 1. SIGNATURE LANDING EXPERIENCE: THE DARK CHAMBER       -->
+<!-- 1. SIGNATURE LANDING EXPERIENCE: THE MONOGRAPH ENTRANCE -->
 <!-- ======================================================= -->
-<div class="fixed inset-0 z-50 bg-[#06080A] flex flex-col items-center justify-center p-6 select-none overflow-hidden" id="darkChamber">
-<!-- Subtle Ambient Noise / Glow -->
+<div class="fixed inset-0 z-50 bg-[#070B08] flex flex-col items-center justify-center p-6 select-none overflow-hidden transition-all duration-700" id="darkChamber">
+<!-- Subtle Ambient Background -->
 <div class="absolute inset-0 najdi-pattern opacity-40 pointer-events-none"></div>
-<div class="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 blur-[140px] pointer-events-none"></div>
-<!-- Centerpiece Branding -->
+<div class="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 blur-[160px] pointer-events-none"></div>
+
+<!-- Centerpiece Corporate Identity -->
 <div class="relative z-10 text-center max-w-2xl flex flex-col items-center">
-<!-- Ornate Geometric Emblem -->
-<div class="relative w-28 h-28 mb-8 flex items-center justify-center">
-<div class="absolute inset-0 rounded-full border border-gold-500/25 animate-ping opacity-25"></div>
-<div class="absolute inset-2 rounded-full border border-gold-400/40 animate-pulse"></div>
-<div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-gold-600 via-gold-400 to-amber-200 p-[2px] shadow-2xl flex items-center justify-center overflow-hidden">
-<img src="assets/logo.png" alt="Shahad Alharabi Logo" class="w-full h-full object-contain bg-white rounded-2xl p-2 shadow-inner">
-</div>
-</div>
-<!-- Regal Bilingual Typography -->
-<h1 class="text-2xl md:text-3xl lg:text-4xl font-cinzel tracking-[0.25em] text-gold-gradient font-bold uppercase mb-2">
-        Shahad Alharabi
-      </h1>
-<p class="text-xs md:text-sm uppercase tracking-[0.4em] text-cashmere/80 font-jakarta mb-4">
-        Advertising &amp; Monumental Architecture
-      </p>
-<div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold-500/60 to-transparent my-2"></div>
-<p class="text-lg md:text-2xl font-amiri text-gold-300 font-semibold mt-1">
-        شركة شهد الحربي للدعاية والإعلان
-      </p>
-<p class="text-xs text-cashmere/60 font-arabicSans mt-1">
-        حيث يتحول الضوء إلى فخامة معمارية
-      </p>
-</div>
-<!-- The Golden Hanging Pull-Cord / Chain -->
-<div class="absolute top-0 right-12 md:right-28 lg:right-36 z-30 flex flex-col items-center cursor-pointer group" id="pullCordWrapper">
-<!-- Chain Mount -->
-<div class="w-6 h-3 bg-gradient-to-b from-neutral-700 to-gold-700 rounded-b shadow-lg border-b border-gold-400/50"></div>
-<!-- Interactive SVG Chain & Tassel -->
-<svg class="overflow-visible spring-bounce" height="260" id="chainSvg" viewbox="0 0 48 260" width="48">
-<defs>
-<lineargradient id="cordGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#AA8820"></stop>
-<stop offset="50%" stop-color="#FFE885"></stop>
-<stop offset="100%" stop-color="#8C6D46"></stop>
-</lineargradient>
-<filter height="140%" id="goldShine" width="140%" x="-20%" y="-20%">
-<fedropshadow dx="0" dy="2" flood-color="#D4AF37" flood-opacity="0.6" stddeviation="4"></fedropshadow>
-</filter>
-</defs>
-<!-- Chain links -->
-<g fill="none" stroke="url(#cordGrad)" stroke-width="2">
-<ellipse cx="24" cy="15" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="27" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="39" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="51" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="63" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="75" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="87" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="99" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="111" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="123" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="135" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="147" rx="3.5" ry="6"></ellipse>
-<ellipse cx="24" cy="159" rx="3.5" ry="6"></ellipse>
-</g>
-<!-- Brass Connector & Ornate Tassel Weight -->
-<g filter="url(#goldShine)" id="pullHandle">
-<!-- Brass cap -->
-<path d="M16 172 L32 172 L28 184 L20 184 Z" fill="url(#cordGrad)"></path>
-<!-- Heavy faceted jewel / handle -->
-<polygon fill="url(#cordGrad)" points="24,186 34,204 24,228 14,204"></polygon>
-<circle cx="24" cy="204" fill="#FFF8DC" r="3"></circle>
-<!-- Flowing brass fringe -->
-<line stroke="#AA8820" stroke-width="1.5" x1="20" x2="18" y1="228" y2="246"></line>
-<line stroke="#FFE885" stroke-width="2" x1="24" x2="24" y1="228" y2="252"></line>
-<line stroke="#8C6D46" stroke-width="1.5" x1="28" x2="30" y1="228" y2="246"></line>
-</g>
-</svg>
-<!-- Pulsing Hint Note -->
-<div class="mt-4 flex flex-col items-center text-center transition-transform group-hover:scale-105">
-<div class="flex items-center space-x-1.5 text-[11px] font-jakarta tracking-widest text-gold-400 uppercase bg-black/60 px-3 py-1.5 rounded-full border border-gold-500/30 backdrop-blur shadow-lg">
-<span class="animate-bounce">↓</span>
-<span class="en-text">Pull to illuminate</span>
-<span class="ar-text hidden">اسحب الضوء للتشغيل</span>
-</div>
-<p class="text-[10px] text-cashmere/50 mt-1 font-mono tracking-tight">Interactive Lighting Trigger</p>
-</div>
+  <!-- Minimalist Architectural Insignia -->
+  <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
+    <div class="absolute inset-0 rounded-2xl border border-gold-500/20"></div>
+    <div class="w-20 h-20 rounded-xl bg-[#0B130E] border border-gold-500/30 p-2.5 shadow-2xl flex items-center justify-center">
+      <img src="company logo.png" alt="Shahad Alharabi Logo" class="w-full h-full object-contain filter drop-shadow">
+    </div>
+  </div>
+
+  <!-- Editorial Bilingual Typography -->
+  <h1 class="text-2xl md:text-3xl lg:text-4xl font-cinzel tracking-[0.2em] text-gold-gradient font-semibold uppercase mb-2">
+    Shahad Alharabi
+  </h1>
+  <p class="text-[11px] uppercase tracking-[0.35em] text-cashmere/75 font-jakarta mb-5">
+    Architectural Advertising · Riyadh
+  </p>
+  <div class="w-12 h-[1px] bg-gold-500/30 my-2"></div>
+  <p class="text-xl md:text-2xl font-amiri text-gold-300 font-medium mt-1">
+    شركة شهد الحربي للدعاية والإعلان
+  </p>
+  <p class="text-xs text-cashmere/60 font-arabicSans mt-1 tracking-wide">
+    الريادة المعمارية في هندسة الشاشات والمنصات الكبرى
+  </p>
+
+  <!-- Clean Architectural Enter Action -->
+  <button onclick="triggerIllumination()" class="mt-10 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500/90 to-gold-600/90 hover:from-gold-400 hover:to-gold-500 text-black font-jakarta font-semibold text-xs uppercase tracking-[0.2em] shadow-lg transition-all hover:scale-[1.02] flex items-center space-x-3 cursor-pointer group">
+    <span class="en-text">Enter Monograph</span>
+    <span class="ar-text hidden font-arabicSans">دخول المنصة الرسمية</span>
+    <span class="group-hover:translate-x-1 transition-transform">→</span>
+  </button>
+  <p class="text-[10px] text-cashmere/40 mt-3 font-mono tracking-wider">ESTABLISHED IN RIYADH · KINGDOM OF SAUDI ARABIA</p>
 </div>
 </div>
 <!-- Radial Flash Light Overlay -->
-<div class="fixed inset-0 z-40 bg-radial from-amber-100 via-gold-400/80 to-transparent mix-blend-screen" id="lightFlash"></div>
+<div class="fixed inset-0 z-40 bg-radial from-amber-100/60 via-gold-500/30 to-transparent mix-blend-screen pointer-events-none opacity-0 transition-opacity duration-500" id="lightFlash"></div>
 <!-- ======================================================= -->
 <!-- MAIN ILLUMINATED APPLICATION CONTAINER                  -->
 <!-- ======================================================= -->
@@ -404,16 +350,14 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 <!-- Brand Signature -->
 <a class="flex items-center space-x-3 rtl:space-x-reverse group" href="#hero">
-<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-700 p-[1.5px] shadow-lg transition-transform group-hover:scale-105">
-<div class="w-full h-full bg-[#0A0D12] rounded-[6px] flex items-center justify-center">
-<img src="assets/logo.png" alt="Logo" class="w-full h-full object-contain p-1 bg-white rounded">
-</div>
+<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/30 p-1.5 shadow transition-transform group-hover:scale-105 flex items-center justify-center">
+<img src="company logo.png" alt="Logo" class="w-full h-full object-contain">
 </div>
 <div class="flex flex-col">
 <span class="font-cinzel text-sm sm:text-base font-bold tracking-widest text-gold-gradient leading-tight">
               SHAHAD ALHARABI
             </span>
-<span class="text-[10px] text-cashmere/80 font-jakarta tracking-wider uppercase">
+<span class="text-[10px] text-cashmere/75 font-jakarta tracking-wider uppercase">
               Advertising · Riyadh
             </span>
 </div>
@@ -444,19 +388,13 @@
 </nav>
 <!-- Right Side Utility Controls -->
 <div class="flex items-center space-x-3 rtl:space-x-reverse">
-<!-- Light Switch Button (Re-triggers dark room) -->
-<button class="p-2 rounded-lg bg-neutral-900 border border-gold-500/20 text-gold-400 hover:text-white hover:border-gold-400 transition-all text-xs flex items-center space-x-1.5 rtl:space-x-reverse" id="retriggerDarkBtn" title="Turn off lights / إعادة الإطفاء">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span class="hidden lg:inline text-[11px] font-jakarta">Lights Off</span>
-</button>
 <!-- Language Switcher Button -->
-<button class="px-3 py-1.5 rounded-lg bg-gold-500/10 border border-gold-500/40 text-gold-300 hover:bg-gold-500/20 text-xs font-semibold tracking-wider uppercase transition-all flex items-center space-x-1" id="langToggleBtn">
+<button class="px-3.5 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/25 text-gold-300 hover:border-gold-400 text-xs font-medium tracking-wider uppercase transition-all flex items-center space-x-1.5" id="langToggleBtn">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
 <span id="langLabel">العربية (RTL)</span>
 </button>
 <!-- Direct Proposal Action -->
-<a class="hidden sm:inline-flex px-4 py-2 rounded-lg bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-black font-jakarta font-bold text-xs uppercase tracking-wider shadow-lg transition-transform hover:scale-[1.02]" href="#contact">
+<a class="hidden sm:inline-flex px-5 py-2 rounded-full bg-gold-500/90 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-wider transition-all" href="#contact">
 <span class="en-text">Request Proposal</span>
 <span class="ar-text hidden font-arabicSans">طلب عرض سعر</span>
 </a>
@@ -464,60 +402,59 @@
 </div>
 </header>
 <!-- 2. HERO SECTION: MONUMENTAL ARCHITECTURE -->
-<section class="relative pt-12 pb-24 md:pt-20 md:pb-36 overflow-hidden" id="hero">
-<!-- Ambient Lighting Spotlights -->
-<div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
-<div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-emeraldRoyal/30 rounded-full blur-[120px] pointer-events-none"></div>
+<section class="relative pt-16 pb-24 md:pt-24 md:pb-36 overflow-hidden" id="hero">
+<!-- Subtle Architectural Lighting Accents -->
+<div class="absolute top-0 left-1/3 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[180px] pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <!-- Header Tagline -->
 <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
-<div class="h-[1px] w-12 bg-gold-500"></div>
-<span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold font-jakarta">
+<div class="h-[1px] w-8 bg-gold-500/50"></div>
+<span class="text-xs uppercase tracking-[0.25em] text-gold-400/90 font-medium font-jakarta">
 <span class="en-text">Where Light Becomes Luxury</span>
 <span class="ar-text hidden font-arabicSans text-sm">حيث يتحول الضوء إلى فخامة</span>
 </span>
 </div>
 <!-- Master Headline -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
 <div class="lg:col-span-7">
-<h1 class="text-3xl sm:text-5xl lg:text-6xl font-cinzel text-ivory font-bold leading-[1.15] mb-6">
-<span class="en-text">Illuminating Riyadh’s <br/><span class="text-gold-gradient">Architectural</span> Renaissance.</span>
-<span class="ar-text hidden font-amiri leading-tight text-4xl sm:text-6xl text-ivory">نُضِيء النهضة المعمارية <br/><span class="text-gold-gradient">الكبرى في عاصمة المملكة</span></span>
+<h1 class="text-3xl sm:text-5xl lg:text-6xl font-cinzel text-ivory font-medium leading-[1.12] mb-6">
+<span class="en-text">Illuminating Riyadh’s <br/><span class="text-gold-gradient font-semibold">Architectural</span> Renaissance.</span>
+<span class="ar-text hidden font-amiri leading-tight text-4xl sm:text-6xl text-ivory">نُضِيء النهضة المعمارية <br/><span class="text-gold-gradient font-bold">الكبرى في عاصمة المملكة</span></span>
 </h1>
-<p class="text-base sm:text-lg text-cashmere font-light leading-relaxed mb-8 max-w-xl">
-<span class="en-text">Shahad Alharabi Advertising brings high-stakes visual environments to life through the considered orchestration of fine-pitch curved LED walls, monumental summit stages, and bespoke architectural signage.</span>
+<p class="text-base sm:text-lg text-cashmere/90 font-light leading-relaxed mb-10 max-w-xl">
+<span class="en-text">Shahad Alharabi Advertising engineers high-stakes visual environments through the meticulous orchestration of fine-pitch curved LED walls, monumental summit stages, and bespoke architectural signage across the Kingdom.</span>
 <span class="ar-text hidden font-arabicSans text-sm sm:text-base leading-loose">تُحوّل شركة شهد الحربي للدعاية والإعلان الضوء والمساحة والشاشات الرقمية العملاقة وتجارب الفعاليات الرسمية إلى بيئات بصرية متكاملة تعكس أرقى معايير العمارة السعودية.</span>
 </p>
 <!-- Dual CTAs -->
 <div class="flex flex-wrap gap-4 items-center mb-12">
-<a class="px-7 py-3.5 rounded-lg bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 text-black font-jakarta font-bold text-xs uppercase tracking-widest gold-glow hover:brightness-110 transition-all flex items-center space-x-2 rtl:space-x-reverse" href="#portfolio">
+<a class="px-7 py-3.5 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-widest shadow-md transition-all flex items-center space-x-2 rtl:space-x-reverse" href="#portfolio">
 <span class="en-text">Explore Selected Works</span>
 <span class="ar-text hidden font-arabicSans text-sm">استكشف المشاريع المنفذة</span>
 <span>→</span>
 </a>
-<a class="px-7 py-3.5 rounded-lg bg-neutral-900/80 hover:bg-neutral-800 text-ivory border border-gold-500/30 hover:border-gold-400 font-jakarta text-xs uppercase tracking-widest transition-all" href="#contact">
+<a class="px-7 py-3.5 rounded-full bg-[#0F1611] hover:bg-neutral-800 text-ivory border border-gold-500/25 hover:border-gold-400 font-jakarta text-xs uppercase tracking-widest transition-all" href="#contact">
 <span class="en-text">Request Proposal</span>
 <span class="ar-text hidden font-arabicSans text-sm">طلب عرض سعر</span>
 </a>
 </div>
-<!-- Verified Metrics Grid -->
-<div class="grid grid-cols-3 gap-6 pt-8 border-t border-neutral-800/80">
+<!-- Refined Architectural Specification Line -->
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-gold-500/15">
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold-400">150+</div>
+<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">150+</div>
 <div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
 <span class="en-text">Completed Summits</span>
 <span class="ar-text hidden font-arabicSans">قمة ومؤتمر عالمي</span>
 </div>
 </div>
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold-400">12,000 m²</div>
+<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">12,000 m²</div>
 <div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
 <span class="en-text">LED Display Modules</span>
 <span class="ar-text hidden font-arabicSans">متر مربع شاشات</span>
 </div>
 </div>
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold-400">100%</div>
+<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">100%</div>
 <div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
 <span class="en-text">Riyadh Standards</span>
 <span class="ar-text hidden font-arabicSans">معايير هندسية معتمدة</span>
@@ -527,76 +464,73 @@
 </div>
 <!-- Hero Architectural Stage Image Showcase -->
 <div class="lg:col-span-5 relative">
-<div class="relative rounded-2xl overflow-hidden gold-border p-2 bg-neutral-950/80 shadow-2xl">
+<div class="relative rounded-2xl overflow-hidden border border-gold-500/25 p-2 bg-[#090E0A] shadow-2xl">
 <!-- Internal Image Frame -->
-<div class="relative h-[420px] rounded-xl overflow-hidden group">
+<div class="relative h-[440px] rounded-xl overflow-hidden group">
 <img alt="Executive LED Summit Stage in Riyadh" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" src="assets/images/01_Hero_Keynote_Stage.jpeg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <!-- Overlay Card Details -->
-<div class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-black/75 backdrop-blur border border-gold-500/20">
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#070B08]/85 backdrop-blur border border-gold-500/20">
 <div class="flex justify-between items-center">
 <div>
-<span class="text-[10px] uppercase font-mono text-gold-400">Flagship Execution</span>
-<h4 class="text-sm font-semibold text-ivory">Cityscape &amp; Global Health Summit Stage</h4>
+<span class="text-[10px] uppercase font-mono text-gold-400/90 tracking-wider">Flagship Execution</span>
+<h4 class="text-sm font-cinzel font-semibold text-ivory">Cityscape &amp; Global Health Summit Stage</h4>
 </div>
 <span class="text-xs font-mono text-cashmere/70">P1.8 Curved Fine-Pitch</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Decorative Backing Bevel -->
-<div class="absolute -bottom-4 -right-4 w-full h-full border border-gold-500/20 rounded-2xl -z-10 pointer-events-none"></div>
 </div>
 </div>
 </div>
 </section>
 <!-- 3. CAPABILITIES / SPATIAL MASTERY -->
-<section class="py-24 bg-charcoal/50 relative border-t border-b border-neutral-900" id="capabilities">
+<section class="py-24 bg-[#0A100C] relative border-t border-b border-gold-500/15" id="capabilities">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-3xl mx-auto mb-16">
-<p class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
 <span class="en-text">Spatial Mastery &amp; Technical Artistry</span>
 <span class="ar-text hidden font-arabicSans">القدرات التنفيذية والتميز الهندسي</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-ivory">
+<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory">
 <span class="en-text">Engineering Monumental Presences</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">هندسة الحضور المعماري والضوئي</span>
 </h2>
-<div class="w-20 h-[1.5px] bg-gold-500 mx-auto mt-4"></div>
+<div class="w-12 h-[1px] bg-gold-500/40 mx-auto mt-4"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Service 1: Illuminated Conference Environments -->
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
-<div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 transition-transform">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
+  <span class="text-2xl font-cinzel font-medium text-gold-400/80">01</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Stagecraft</span>
 </div>
-<h3 class="text-xl font-cinzel font-bold text-ivory mb-3">
+<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
 <span class="en-text">Illuminated Conference Environments</span>
 <span class="ar-text hidden font-arabicSans font-bold">بيئات المؤتمرات والقمم الكبرى</span>
 </h3>
-<p class="text-sm text-cashmere/80 leading-relaxed mb-6">
+<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
 <span class="en-text">Turnkey stagecraft for royal, governmental, and private summits. Broadcast-rated, flicker-free stage lighting with custom acoustic architectural treatments.</span>
 <span class="ar-text hidden font-arabicSans">تصميم وتجهيز منصات المؤتمرات الرسمية والشبه حكومية، إضاءة بث تلفزيوني خالية من الوميض مع دمج متناغم للعناصر الصوتية والمعمارية.</span>
 </p>
-<ul class="text-xs space-y-2 text-cashmere/70 font-mono border-t border-neutral-800/80 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>4K Zero-Latency Video Switching</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>IP65 Rigging &amp; Dynamic Trusses</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>Acoustic Wave Dampening</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse" href="#contact">
+<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
@@ -605,35 +539,34 @@
 <!-- Service 2: Large-Format Curved LED Video Walls -->
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
-<div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 transition-transform">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
+  <span class="text-2xl font-cinzel font-medium text-gold-400/80">02</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Display</span>
 </div>
-<h3 class="text-xl font-cinzel font-bold text-ivory mb-3">
+<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
 <span class="en-text">Curved LED Display Summits</span>
 <span class="ar-text hidden font-arabicSans font-bold">شاشات LED المنحنية فائقة الدقة</span>
 </h3>
-<p class="text-sm text-cashmere/80 leading-relaxed mb-6">
+<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
 <span class="en-text">Ultra-fine pitch modules (P1.5 to P2.5) configured into fluid concave and convex geometries, offering immersive pan-optical sightlines for multi-thousand audience auditoriums.</span>
 <span class="ar-text hidden font-arabicSans">شاشات عرض عملاقة بمقاسات دقيقة للغاية من P1.5 حتى P2.5، بتصميمات منحنية مقعرة ومحدبة توفر زوايا رؤية بانورامية متكاملة.</span>
 </p>
-<ul class="text-xs space-y-2 text-cashmere/70 font-mono border-t border-neutral-800/80 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>HDR10+ Color Calibration</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>3840Hz High Refresh Rate</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>Seamless Micro-Gap Tolerances</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse" href="#contact">
+<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
@@ -642,40 +575,42 @@
 <!-- Service 3: Architectural & 3D Signage -->
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
-<div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 transition-transform">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
+  <span class="text-2xl font-cinzel font-medium text-gold-400/80">03</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Signage</span>
 </div>
-<h3 class="text-xl font-cinzel font-bold text-ivory mb-3">
+<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
 <span class="en-text">Monumental 3D Signage</span>
 <span class="ar-text hidden font-arabicSans font-bold">اللوحات المعمارية ثلاثية الأبعاد</span>
 </h3>
-<p class="text-sm text-cashmere/80 leading-relaxed mb-6">
-<span class="en-text">Precision laser-cut stainless steel, brushed brass channel letters, edge-lit acrylics, and structural facade brand markers built to withstand extreme Gulf climate extremes.</span>
+<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
+<span class="en-text">Precision laser-cut stainless steel, brushed brass channel letters, edge-lit acrylics, and structural facade brand markers built to withstand extreme Gulf climate conditions.</span>
 <span class="ar-text hidden font-arabicSans">تصنيع الحروف المجسمة من الفولاذ المقاوم للصدأ والنحاس المصقول والأكريليك المعالج بتقنية IP67 لتحمل أقصى درجات حرارة الصيف في الرياض.</span>
 </p>
-<ul class="text-xs space-y-2 text-cashmere/70 font-mono border-t border-neutral-800/80 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>Marine-Grade Brass &amp; Steel</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>IP67 Dust &amp; Thermal Resistance</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400">✦</span>
+<span class="text-gold-400/80">―</span>
 <span>Internal Halo &amp; Neon Diffusion</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse" href="#contact">
+<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
 </a>
 </div>
+</div>
+</div>
+</section>
 </div>
 </div>
 </section>
@@ -735,16 +670,16 @@
 </section>
 
 <!-- 5. INTERACTIVE 3D PHOTOBOOK GALLERY (Turnable Picture Book) -->
-<section class="py-24 relative overflow-hidden bg-[#07130B]" id="portfolio">
+<section class="py-24 relative overflow-hidden bg-[#070B08]" id="portfolio">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
       <div>
-        <p class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2 font-mono">
+        <p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
           <span class="en-text">Master Monograph · 3D Gallery</span>
           <span class="ar-text hidden font-arabicSans">المعرض التفاعلي المصور ثلاثي الأبعاد</span>
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-bold text-ivory">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-medium text-ivory">
           <span class="en-text">The Monumental Photobook</span>
           <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">سجل الإنجازات المصور</span>
         </h2>
@@ -752,18 +687,18 @@
 
       <!-- Book Controls -->
       <div class="flex items-center space-x-3 rtl:space-x-reverse mt-6 md:mt-0">
-        <button onclick="prevBookSpread()" class="px-4 py-2.5 rounded-xl bg-neutral-900 border border-gold-500/30 text-gold-300 hover:bg-gold-500/20 hover:border-gold-400 font-jakarta text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow-lg" title="Turn backward">
+        <button onclick="prevBookSpread()" class="px-4 py-2 rounded-full bg-[#0F1611] border border-gold-500/20 text-gold-300 hover:border-gold-400 font-jakarta text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse" title="Turn backward">
           <span>❮</span>
           <span class="en-text">Previous</span>
           <span class="ar-text hidden font-arabicSans">السابق</span>
         </button>
 
-        <div class="px-4 py-2 rounded-xl bg-black/80 border border-gold-500/40 text-xs font-mono text-gold-300 flex items-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
-          <span id="bookPageIndicator">Spread 1 of 8</span>
+        <div class="px-4 py-2 rounded-full bg-[#090E0A] border border-gold-500/30 text-xs font-mono text-gold-300/90 flex items-center space-x-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+          <span id="bookPageIndicator">Spread 1 of 15</span>
         </div>
 
-        <button onclick="nextBookSpread()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-black font-jakarta text-xs font-bold uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow-lg" title="Turn forward">
+        <button onclick="nextBookSpread()" class="px-4 py-2 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta text-xs font-semibold uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" title="Turn forward">
           <span class="en-text">Next Page</span>
           <span class="ar-text hidden font-arabicSans">التالي</span>
           <span>❯</span>
@@ -774,11 +709,11 @@
     <!-- Interaction Hint Bar -->
     <div class="flex items-center justify-between text-xs font-mono text-cashmere/70 mb-6 px-1">
       <span class="flex items-center space-x-2">
-        <span class="text-gold-400">📖</span>
+        <span class="text-gold-400/80">✦</span>
         <span class="en-text">Click right page to turn forward, left page to turn backward.</span>
         <span class="ar-text hidden font-arabicSans">انقر على الصفحة اليمنى للتقدم، أو اليسرى للرجوع مع تأثير تقليب واقعي.</span>
       </span>
-      <span class="hidden sm:inline text-gold-400/80">Press [←] or [→] arrow keys to flip</span>
+      <span class="hidden sm:inline text-gold-400/70 font-mono text-[11px]">Keyboard: [←] [→] arrow keys</span>
     </div>
 
     <!-- 3D BOOK STAGE -->
@@ -808,62 +743,62 @@
 </section>
 
 <!-- 6. INTERACTIVE PDF BROCHURE & LOOKBOOK READER -->
-<section class="py-24 bg-charcoal/70 border-t border-b border-neutral-900 relative" id="lookbook">
+<section class="py-24 bg-[#0A100C] border-t border-b border-gold-500/15 relative" id="lookbook">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
 <!-- Text Information -->
 <div class="lg:w-1/2">
-<p class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
 <span class="en-text">Official Corporate Literature</span>
 <span class="ar-text hidden font-arabicSans">الملف التعريفي الرسمي الشامل</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-ivory mb-6">
+<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory mb-6 leading-tight">
 <span class="en-text">Explore the Complete Corporate Lookbook</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">تصفح الكتالوج التعريفي المتكامل</span>
 </h2>
-<p class="text-sm text-cashmere/80 leading-relaxed mb-6">
+<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
 <span class="en-text">Delve into our comprehensive 10-page master portfolio detailing our corporate engineering standards, structural certifications, royal summit case studies, and complete material fabrication specifications.</span>
 <span class="ar-text hidden font-arabicSans">استعرض الملف التوثيقي الرسمي (10 صفحات) المتضمن كافة الاعتمادات الهندسية للمشاريع الكبرى والمواصفات المعتمدة في المملكة العربية السعودية.</span>
 </p>
 <div class="flex flex-wrap items-center gap-4 mb-8">
-<a class="px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-black font-jakarta font-bold text-xs uppercase tracking-wider shadow-lg flex items-center space-x-2 rtl:space-x-reverse transition-transform hover:scale-105" download="Shahad-Alharabi-Advertising-Portfolio.pdf" href="SHAHAD-ALHARABI-ADVERTISING.pdf">
+<a class="px-6 py-3 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" download="Shahad-Alharabi-Advertising-Portfolio.pdf" href="SHAHAD-ALHARABI-ADVERTISING.pdf">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 <span class="en-text">Download Official PDF</span>
 <span class="ar-text hidden font-arabicSans">تحميل الملف التعريفي PDF</span>
 </a>
-<span class="text-xs text-cashmere/60 font-mono">Size: 14.5 MB · Ultra HD Master</span>
+<span class="text-xs text-cashmere/60 font-mono">14.5 MB · Ultra HD Master</span>
 </div>
 <!-- Page Selector Thumbnails -->
-<div class="border-t border-neutral-800 pt-6">
-<span class="text-xs uppercase font-mono text-cashmere/70 block mb-3">Jump to Page:</span>
+<div class="border-t border-gold-500/15 pt-6">
+<span class="text-[11px] uppercase font-mono text-cashmere/70 block mb-3">Jump to Document Page:</span>
 <div class="flex flex-wrap gap-2" id="pdfThumbnails">
 <!-- Javascript will populate or static buttons -->
-<button class="pdf-btn active px-3 py-1.5 rounded bg-gold-500 text-black font-mono text-xs font-bold" onclick="setPdfPage(1)">01</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(2)">02</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(3)">03</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(4)">04</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(5)">05</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(6)">06</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(7)">07</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(8)">08</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(9)">09</button>
-<button class="pdf-btn px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 text-cashmere font-mono text-xs" onclick="setPdfPage(10)">10</button>
+<button class="pdf-btn active px-3 py-1.5 rounded-full bg-gold-500 text-black font-mono text-xs font-semibold" onclick="setPdfPage(1)">01</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(2)">02</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(3)">03</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(4)">04</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(5)">05</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(6)">06</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(7)">07</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(8)">08</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(9)">09</button>
+<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(10)">10</button>
 </div>
 </div>
 </div>
 <!-- Digital Reader Showcase -->
 <div class="lg:w-1/2 w-full">
-<div class="luxury-card rounded-2xl p-4 sm:p-6 relative">
-<div class="relative aspect-[16/9] w-full max-w-xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black border border-gold-500/40">
+<div class="luxury-card rounded-2xl p-4 sm:p-5 relative">
+<div class="relative aspect-[16/9] w-full max-w-xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black border border-gold-500/30">
 <img alt="PDF Lookbook Preview" class="w-full h-full object-cover sm:object-contain transition-opacity duration-300" id="pdfPageViewer" src="assets/pdf_pages/page_1_screenshot.png"/>
 <!-- Bottom Reader Controls -->
-<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2 rounded-lg bg-black/85 backdrop-blur border border-gold-500/25">
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2 rounded-lg bg-black/80 backdrop-blur border border-gold-500/20">
 <button class="px-3 py-1 text-gold-400 hover:text-white font-mono text-xs transition-colors" onclick="prevPdfPage()">
                     ❮ Prev
                   </button>
-<span class="text-xs font-mono text-cashmere font-semibold tracking-wider" id="pageIndicator">Page 1 of 10</span>
+<span class="text-xs font-mono text-cashmere/90 tracking-wider" id="pageIndicator">Page 1 of 10</span>
 <button class="px-3 py-1 text-gold-400 hover:text-white font-mono text-xs transition-colors" onclick="nextPdfPage()">
                     Next ❯
                   </button>
@@ -875,85 +810,85 @@
 </div>
 </section>
 <!-- 7. THE CUSTOMER EXPERIENCE: 4-STAGE METHODOLOGY -->
-<section class="py-24 relative bg-obsidian" id="process">
+<section class="py-24 relative bg-[#070B08]" id="process">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-3xl mx-auto mb-16">
-<p class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
 <span class="en-text">Precision Execution</span>
 <span class="ar-text hidden font-arabicSans">المعايير المنهجية للتنفيذ</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-ivory">
+<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory">
 <span class="en-text">The Four Pillars of Illumination</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">مراحل تحويل الرؤية إلى واقع استثنائي</span>
 </h2>
-<div class="w-20 h-[1.5px] bg-gold-500 mx-auto mt-4"></div>
+<div class="w-12 h-[1px] bg-gold-500/40 mx-auto mt-4"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- Stage 1 -->
-<div class="p-8 rounded-2xl bg-charcoal/80 border border-neutral-800/80 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
 <div>
-<span class="text-4xl font-cinzel font-bold text-gold-500/40 block mb-4">01</span>
-<h3 class="text-lg font-cinzel font-bold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">01</span>
+<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
 <span class="en-text">Understand</span>
 <span class="ar-text hidden font-arabicSans font-bold">الفهم والتحليل المعماري</span>
 </h3>
-<p class="text-xs text-cashmere/80 leading-relaxed">
+<p class="text-xs text-cashmere/85 font-light leading-relaxed">
 <span class="en-text">In-depth spatial acoustic analysis, sightline studies, electrical infrastructure audits, and architectural harmony assessments in Riyadh.</span>
 <span class="ar-text hidden font-arabicSans">دراسة المساحة وزوايا الرؤية وخطوط الإمداد الكهربائي لضمان التوافق التام مع البنية التحتية للمبنى أو القاعة.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-neutral-800 text-[11px] font-mono text-gold-400">
+<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
               Audit &amp; Site Survey
             </div>
 </div>
 <!-- Stage 2 -->
-<div class="p-8 rounded-2xl bg-charcoal/80 border border-neutral-800/80 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
 <div>
-<span class="text-4xl font-cinzel font-bold text-gold-500/40 block mb-4">02</span>
-<h3 class="text-lg font-cinzel font-bold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">02</span>
+<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
 <span class="en-text">Envision</span>
 <span class="ar-text hidden font-arabicSans font-bold">التصور الهندسي ثلاثي الأبعاد</span>
 </h3>
-<p class="text-xs text-cashmere/80 leading-relaxed">
+<p class="text-xs text-cashmere/85 font-light leading-relaxed">
 <span class="en-text">Photorealistic 3D CAD renders, lux level lighting simulations, curvature calculations, and dynamic mockups before manufacturing.</span>
 <span class="ar-text hidden font-arabicSans">إعداد مجسمات ثلاثية الأبعاد ومحاكاة دقيقة لدرجات الإضاءة وانحناءات الشاشات قبل بدء التصنيع الفعلي.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-neutral-800 text-[11px] font-mono text-gold-400">
+<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
               CAD &amp; Lux Simulations
             </div>
 </div>
 <!-- Stage 3 -->
-<div class="p-8 rounded-2xl bg-charcoal/80 border border-neutral-800/80 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
 <div>
-<span class="text-4xl font-cinzel font-bold text-gold-500/40 block mb-4">03</span>
-<h3 class="text-lg font-cinzel font-bold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">03</span>
+<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
 <span class="en-text">Refine</span>
 <span class="ar-text hidden font-arabicSans font-bold">التطوير واختيار المواد</span>
 </h3>
-<p class="text-xs text-cashmere/80 leading-relaxed">
+<p class="text-xs text-cashmere/85 font-light leading-relaxed">
 <span class="en-text">Precision CNC metal fabrication, heat dissipation stress testing, driver calibration, and Saudi civil defense compliance verification.</span>
 <span class="ar-text hidden font-arabicSans">تصنيع المعادن بالليزر، واختبار مقاومة الحرارة واستهلاك الطاقة ومطابقة مواصفات الدفاع المدني السعودي.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-neutral-800 text-[11px] font-mono text-gold-400">
+<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
               Fabrication &amp; Stress Tests
             </div>
 </div>
 <!-- Stage 4 -->
-<div class="p-8 rounded-2xl bg-charcoal/80 border border-neutral-800/80 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
 <div>
-<span class="text-4xl font-cinzel font-bold text-gold-500/40 block mb-4">04</span>
-<h3 class="text-lg font-cinzel font-bold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">04</span>
+<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
 <span class="en-text">Collaborate</span>
 <span class="ar-text hidden font-arabicSans font-bold">التنفيذ الميداني والدعم</span>
 </h3>
-<p class="text-xs text-cashmere/80 leading-relaxed">
+<p class="text-xs text-cashmere/85 font-light leading-relaxed">
 <span class="en-text">On-site structural installation by certified engineers, live summit operation, and continuous 24/7 technical guardianship.</span>
 <span class="ar-text hidden font-arabicSans">تركيب ميداني بمعايير سلامة صارمة بإشراف مهندسين متخصصين مع إدارة فنية مباشرة طيلة مدة الحدث.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-neutral-800 text-[11px] font-mono text-gold-400">
+<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
               Turnkey Commissioning
             </div>
 </div>
@@ -961,96 +896,96 @@
 </div>
 </section>
 <!-- 9. CONTACT, HEADQUARTERS & RIYADH LOCATION HUB -->
-<section class="py-24 relative bg-obsidian" id="contact">
+<section class="py-24 relative bg-[#070B08]" id="contact">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
 <!-- Contact Direct Information -->
 <div class="lg:col-span-5">
-<p class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
 <span class="en-text">Direct Inquiries</span>
 <span class="ar-text hidden font-arabicSans">التواصل المباشر والاستفسارات</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-ivory mb-6">
+<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory mb-6 leading-tight">
 <span class="en-text">Let Us Illuminate Your Next Landmark.</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl leading-tight">لنبدأ في إضاءة مشروعكم المعماري القادم.</span>
 </h2>
-<p class="text-sm text-cashmere/80 leading-relaxed mb-8">
+<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-8">
 <span class="en-text">Contact our Riyadh corporate headquarters directly for tender submittals, stagecraft consulting, and architectural lighting specifications.</span>
 <span class="ar-text hidden font-arabicSans">تواصل مباشرة مع المقر الرئيسي بالرياض لتنسيق المناقصات والمواصفات المعمارية ودراسات المشاريع الخاصة.</span>
 </p>
 <!-- Direct Channel Links -->
 <div class="space-y-4">
 <!-- Location Card -->
-<div class="p-4 rounded-xl bg-charcoal border border-neutral-800 flex items-start space-x-3 rtl:space-x-reverse">
-<div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+<div class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 flex items-start space-x-3 rtl:space-x-reverse">
+<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-xs uppercase font-mono text-gold-400">Riyadh Headquarters</h4>
-<p class="text-xs text-ivory mt-0.5">Building No. 3851, Al Zubdani Street, As Salhiya Dist., Riyadh-12662, Saudi Arabia</p>
+<h4 class="text-[11px] uppercase font-mono text-gold-400/90 tracking-wider">Riyadh Headquarters</h4>
+<p class="text-xs text-ivory mt-0.5 font-light">Building No. 3851, Al Zubdani Street, As Salhiya Dist., Riyadh-12662, Saudi Arabia</p>
 <p class="text-xs text-cashmere/70 font-arabicSans mt-0.5">مبنى 3851، شارع الزبداني، حي الصالحية، الرياض 12662</p>
 </div>
 </div>
 <!-- Phone & WhatsApp Card -->
-<a class="p-4 rounded-xl bg-charcoal border border-neutral-800 hover:border-gold-500/50 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://wa.me/966502958759" target="_blank">
-<div class="w-10 h-10 rounded-lg bg-emeraldRoyal/40 border border-emeraldRoyal text-emerald-400 flex items-center justify-center shrink-0">
+<a class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://wa.me/966502958759" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-emerald-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.63c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-xs uppercase font-mono text-cashmere/70">Phone &amp; WhatsApp Support</h4>
-<p class="text-sm font-bold text-gold-300 group-hover:text-gold-200 mt-0.5">+966 50 295 8759</p>
+<h4 class="text-[11px] uppercase font-mono text-cashmere/70">Phone &amp; WhatsApp Support</h4>
+<p class="text-sm font-semibold text-gold-300 group-hover:text-gold-200 mt-0.5">+966 50 295 8759</p>
 </div>
 </a>
 <!-- Email Card -->
-<a class="p-4 rounded-xl bg-charcoal border border-neutral-800 hover:border-gold-500/50 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shahadalharbiadvt.com&su=Inquiry%20regarding%20Advertising%20%26%20Stage%20Architecture" target="_blank" rel="noopener noreferrer">
-<div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+<a class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shahadalharbiadvt.com&su=Inquiry%20regarding%20Advertising%20%26%20Stage%20Architecture" target="_blank" rel="noopener noreferrer">
+<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-xs uppercase font-mono text-cashmere/70">Official Correspondence</h4>
-<p class="text-sm font-bold text-ivory group-hover:text-gold-300 mt-0.5">info@shahadalharbiadvt.com</p>
+<h4 class="text-[11px] uppercase font-mono text-cashmere/70">Official Correspondence</h4>
+<p class="text-sm font-semibold text-ivory group-hover:text-gold-300 mt-0.5">info@shahadalharbiadvt.com</p>
 </div>
 </a>
 </div>
 </div>
 <!-- Interactive Inquiry Form -->
 <div class="lg:col-span-7">
-<div class="luxury-card rounded-3xl p-8 border border-gold-500/30">
-<h3 class="text-xl font-cinzel font-bold text-ivory mb-2">Initiate Tender or Proposal</h3>
-<p class="text-xs text-cashmere/70 mb-6">Our technical directors review and acknowledge requests within 4 operational hours.</p>
+<div class="luxury-card rounded-2xl p-8 border border-gold-500/20">
+<h3 class="text-xl font-cinzel font-medium text-ivory mb-2">Initiate Tender or Proposal</h3>
+<p class="text-xs text-cashmere/70 mb-6 font-light">Our technical directors review and acknowledge requests within 4 operational hours.</p>
 <form class="space-y-4" id="inquiryForm" onsubmit="handleFormSubmit(event)">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
-<label class="block text-xs uppercase font-mono text-cashmere mb-1">Your Full Name</label>
-<input id="inqName" class="w-full p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-ivory text-xs focus:border-gold-500 outline-none" placeholder="e.g. Eng. Khalid Al-Otaibi" required="" type="text"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Your Full Name</label>
+<input id="inqName" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Eng. Khalid Al-Otaibi" required="" type="text"/>
 </div>
 <div>
-<label class="block text-xs uppercase font-mono text-cashmere mb-1">Company / Entity</label>
-<input id="inqCompany" class="w-full p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-ivory text-xs focus:border-gold-500 outline-none" placeholder="e.g. Riyadh Development Authority" required="" type="text"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Company / Entity</label>
+<input id="inqCompany" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Riyadh Development Authority" required="" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
-<label class="block text-xs uppercase font-mono text-cashmere mb-1">Email Address</label>
-<input id="inqEmail" class="w-full p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-ivory text-xs focus:border-gold-500 outline-none" placeholder="name@domain.com" required="" type="email"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Email Address</label>
+<input id="inqEmail" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="name@domain.com" required="" type="email"/>
 </div>
 <div>
-<label class="block text-xs uppercase font-mono text-cashmere mb-1">Phone Number</label>
-<input id="inqPhone" class="w-full p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-ivory text-xs focus:border-gold-500 outline-none" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Phone Number</label>
+<input id="inqPhone" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
 </div>
 </div>
 <div>
-<label class="block text-xs uppercase font-mono text-cashmere mb-1">Scope of Requirements</label>
-<textarea id="inqScope" class="w-full p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-ivory text-xs focus:border-gold-500 outline-none" placeholder="Describe your venue, stage dimensions, timeline, or signage requirements..." required="" rows="4"></textarea>
+<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Scope of Requirements</label>
+<textarea id="inqScope" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="Describe your venue, stage dimensions, timeline, or signage requirements..." required="" rows="4"></textarea>
 </div>
-<button class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 hover:brightness-110 text-black font-jakarta font-bold text-xs uppercase tracking-widest shadow-xl transition-all" id="submitBtn" type="submit">
+<button class="w-full py-4 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-widest shadow transition-all cursor-pointer" id="submitBtn" type="submit">
                   Submit Formal Inquiry · إرسال الطلب الرسمي
                 </button>
 </form>
@@ -1094,40 +1029,39 @@
 </div>
 
 <!-- EMAIL REDIRECT SELECTION MODAL (GMAIL VS OUTLOOK) -->
-<div class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4" id="emailClientModal">
-  <div class="relative max-w-md w-full rounded-2xl bg-gradient-to-b from-[#0E2617] to-[#07130B] border border-gold-500/40 p-6 sm:p-8 shadow-2xl">
+<div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4" id="emailClientModal">
+  <div class="relative max-w-md w-full rounded-2xl bg-[#090E0A] border border-gold-500/30 p-6 sm:p-8 shadow-2xl">
     <!-- Close icon -->
-    <button onclick="closeEmailModal()" class="absolute top-4 right-4 text-cashmere/70 hover:text-white text-lg font-mono">✕</button>
+    <button onclick="closeEmailModal()" class="absolute top-4 right-4 text-cashmere/60 hover:text-white text-base font-mono cursor-pointer">✕</button>
 
     <div class="flex items-center space-x-3 mb-4">
-      <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center">
+      <div class="w-10 h-10 rounded-xl bg-[#0F1611] border border-gold-500/25 text-gold-400 flex items-center justify-center">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>
       </div>
       <div>
-        <h3 class="text-lg font-cinzel font-bold text-ivory">Dispatch Inquiry</h3>
-        <p class="text-[11px] font-mono text-cashmere/70">Select your preferred email provider</p>
+        <h3 class="text-lg font-cinzel font-medium text-ivory">Dispatch Inquiry</h3>
+        <p class="text-[11px] font-mono text-cashmere/70">Select your preferred email environment</p>
       </div>
     </div>
 
-    <p class="text-xs text-cashmere/90 leading-relaxed mb-6 font-light">
-      Your project details are formatted and ready. Choose whether you want to open and review them in <strong class="text-gold-300">Gmail</strong> or <strong class="text-gold-300">Microsoft Outlook</strong>:
+    <p class="text-xs text-cashmere/85 leading-relaxed mb-6 font-light">
+      Your specifications are compiled and ready. Select whether to open and transmit via <strong class="text-gold-300 font-medium">Gmail</strong> or <strong class="text-gold-300 font-medium">Microsoft Outlook</strong>:
     </p>
 
     <!-- Provider Selection Buttons -->
     <div class="space-y-3">
       <!-- Gmail Option -->
-      <button onclick="dispatchToEmail('gmail')" class="w-full p-4 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 border border-gold-500/30 hover:border-gold-400 text-ivory transition-all flex items-center justify-between group">
+      <button onclick="dispatchToEmail('gmail')" class="w-full p-4 rounded-xl bg-[#0F1611] hover:bg-[#131D16] border border-gold-500/20 hover:border-gold-400/60 text-ivory transition-all flex items-center justify-between group cursor-pointer">
         <div class="flex items-center space-x-3">
-          <!-- Gmail icon -->
-          <div class="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+          <div class="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052C21.691 2.279 24 3.434 24 5.457z"/>
             </svg>
           </div>
           <div class="text-left rtl:text-right">
-            <span class="block text-sm font-bold text-ivory group-hover:text-gold-300">Google Gmail</span>
+            <span class="block text-sm font-semibold text-ivory group-hover:text-gold-300">Google Gmail</span>
             <span class="block text-[10px] font-mono text-cashmere/60">Open in Gmail Web with draft prefilled</span>
           </div>
         </div>
@@ -1135,16 +1069,15 @@
       </button>
 
       <!-- Outlook Option -->
-      <button onclick="dispatchToEmail('outlook')" class="w-full p-4 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 border border-gold-500/30 hover:border-gold-400 text-ivory transition-all flex items-center justify-between group">
+      <button onclick="dispatchToEmail('outlook')" class="w-full p-4 rounded-xl bg-[#0F1611] hover:bg-[#131D16] border border-gold-500/20 hover:border-gold-400/60 text-ivory transition-all flex items-center justify-between group cursor-pointer">
         <div class="flex items-center space-x-3">
-          <!-- Outlook icon -->
-          <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+          <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M7.88 12.04q0 .45-.11.87-.1.41-.33.74-.22.33-.58.52-.35.18-.86.18-.47 0-.82-.18-.34-.19-.57-.52-.22-.33-.33-.75-.1-.42-.1-.87 0-.46.1-.88.11-.43.34-.76.23-.33.58-.51.36-.19.84-.19.49 0 .84.19.36.18.58.51.23.33.34.76.11.42.11.89zm1.96 0q0-.8-.26-1.5-.25-.7-.71-1.22-.45-.51-1.09-.8-.64-.29-1.44-.29-.81 0-1.46.29-.64.29-1.1.8-.45.52-.71 1.22-.25.7-.25 1.5 0 .81.25 1.51.26.7.71 1.22.46.51 1.1.8.65.29 1.46.29.8 0 1.44-.29.64-.29 1.09-.8.46-.52.71-1.22.26-.7.26-1.51zm13.16-5.54v11q0 .41-.3.7-.29.3-.7.3h-1.5v-7.15l-4.5 3.37-4.5-3.37V18.5h-1.5q-.41 0-.7-.3-.3-.29-.3-.7V6.5q0-.41.3-.7.29-.3.7-.3h1.37l4.63 3.47 4.63-3.47H22q.41 0 .7.3.3.29.3.7z"/>
             </svg>
           </div>
           <div class="text-left rtl:text-right">
-            <span class="block text-sm font-bold text-ivory group-hover:text-gold-300">Microsoft Outlook</span>
+            <span class="block text-sm font-semibold text-ivory group-hover:text-gold-300">Microsoft Outlook</span>
             <span class="block text-[10px] font-mono text-cashmere/60">Open in Outlook Web with draft prefilled</span>
           </div>
         </div>
@@ -1152,8 +1085,8 @@
       </button>
 
       <!-- Standard Mail Client Fallback -->
-      <button onclick="dispatchToEmail('default')" class="w-full py-2.5 text-center text-[11px] font-mono text-cashmere/60 hover:text-gold-300 transition-colors">
-        Or open in default device email app (Mail / Apple Mail) →
+      <button onclick="dispatchToEmail('default')" class="w-full py-2.5 text-center text-[11px] font-mono text-cashmere/60 hover:text-gold-300 transition-colors cursor-pointer">
+        Or open in default system mail client (Mail / Apple Mail) →
       </button>
     </div>
   </div>
@@ -1163,44 +1096,18 @@
 <!-- JAVASCRIPT CONTROLLERS                                   -->
 <!-- ======================================================= -->
 <script>
-    // 1. TACTILE PULL-CORD PHYSICS & ILLUMINATION LOGIC
-    const pullCord = document.getElementById('pullCordWrapper');
-    const chainSvg = document.getElementById('chainSvg');
+    // 1. MONOGRAPH ENTRANCE LOGIC
     const darkChamber = document.getElementById('darkChamber');
     const lightFlash = document.getElementById('lightFlash');
-    const retriggerDarkBtn = document.getElementById('retriggerDarkBtn');
-
-    let isPulling = false;
-    let startY = 0;
 
     function triggerIllumination() {
-      // Elastic snap down
-      chainSvg.style.transform = 'translateY(55px)';
-      
+      if (!darkChamber) return;
+      lightFlash.style.opacity = '0.6';
+      darkChamber.classList.add('chamber-open');
       setTimeout(() => {
-        // Flash light burst
-        lightFlash.style.opacity = '1';
-        
-        // Return chain with spring
-        chainSvg.style.transform = 'translateY(0px)';
-        
-        setTimeout(() => {
-          // Dissolve dark chamber
-          darkChamber.classList.add('chamber-open');
-          
-          setTimeout(() => {
-            lightFlash.style.opacity = '0';
-          }, 350);
-        }, 180);
-      }, 200);
+        lightFlash.style.opacity = '0';
+      }, 400);
     }
-
-    pullCord.addEventListener('click', triggerIllumination);
-
-    // Retrigger Dark Chamber anytime
-    retriggerDarkBtn.addEventListener('click', () => {
-      darkChamber.classList.remove('chamber-open');
-    });
 
     // 2. BILINGUAL RTL / LTR ENGINE
     const langToggleBtn = document.getElementById('langToggleBtn');
@@ -1707,25 +1614,25 @@ Inquiry submitted via official web monograph. Looking forward to your technical 
     function renderPage(data) {
       if (!data) return '';
       return `
-        <div class="relative w-full h-full rounded-xl overflow-hidden group cursor-pointer border border-gold-500/25 bg-black/40 shadow-inner" onclick="openLightbox('${data.fullImage || data.image}', '${data.title || ''}', '${data.subtitle || data.desc || ''}')">
+        <div class="relative w-full h-full rounded-xl overflow-hidden group cursor-pointer border border-gold-500/20 bg-black shadow-inner" onclick="openLightbox('${data.fullImage || data.image}', '${data.title || ''}', '${data.subtitle || data.desc || ''}')">
           <img src="${data.image}" alt="${data.title || 'Portfolio Image'}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-75 group-hover:opacity-90 transition-opacity"></div>
           
           <!-- Subtle Top Badging -->
           ${data.tag ? `
             <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-              <span class="text-[9px] font-mono tracking-widest uppercase bg-black/70 backdrop-blur px-2.5 py-1 rounded border border-gold-500/30 text-gold-300">${data.tag}</span>
-              ${data.badge ? `<span class="text-[8px] font-mono bg-emeraldDeep/80 px-2 py-0.5 rounded border border-gold-500/20 text-cashmere/80">${data.badge}</span>` : ''}
+              <span class="text-[9px] font-mono tracking-widest uppercase bg-[#070B08]/85 backdrop-blur px-2.5 py-1 rounded border border-gold-500/25 text-gold-300">${data.tag}</span>
+              ${data.badge ? `<span class="text-[8px] font-mono bg-[#0B130E]/80 px-2 py-0.5 rounded border border-gold-500/15 text-cashmere/75">${data.badge}</span>` : ''}
             </div>
           ` : ''}
 
           <!-- Elegant Bottom Title Bar -->
-          <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-black/80 backdrop-blur border border-gold-500/30 flex justify-between items-center transition-all group-hover:border-gold-400">
+          <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-[#070B08]/85 backdrop-blur border border-gold-500/25 flex justify-between items-center transition-all group-hover:border-gold-400">
             <div class="pr-2 truncate">
-              <h4 class="text-xs sm:text-sm font-cinzel font-bold text-ivory truncate">${data.title}</h4>
-              <p class="text-[10px] text-cashmere/85 font-mono truncate">${data.subtitle || data.desc || 'Click to view full detail'}</p>
+              <h4 class="text-xs sm:text-sm font-cinzel font-medium text-ivory truncate">${data.title}</h4>
+              <p class="text-[10px] text-cashmere/80 font-mono truncate">${data.subtitle || data.desc || 'Click to examine detail'}</p>
             </div>
-            <div class="flex-shrink-0 flex items-center space-x-1 text-gold-400 text-[10px] font-mono uppercase bg-gold-500/10 px-2 py-1 rounded border border-gold-500/30">
+            <div class="flex-shrink-0 flex items-center space-x-1 text-gold-400 text-[10px] font-mono uppercase bg-[#0F1611] px-2.5 py-1 rounded border border-gold-500/25">
               <span>View</span>
               <span>🔍</span>
             </div>
