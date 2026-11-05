@@ -18,9 +18,12 @@
         extend: {
           colors: {
             obsidian: '#070B08',
-            charcoal: '#0F1611',
-            emeraldDeep: '#0A140D',
-            emeraldRoyal: '#0D1E13',
+            charcoal: '#0C140E',
+            emeraldDeep: '#08100A',
+            emeraldRoyal: '#0B1A10',
+            sandCream: '#F4EFEA',
+            warmStone: '#ECE5DE',
+            parchment: '#FAF7F2',
             gold: {
               300: '#E6D7BD',
               400: '#D4BF97',
@@ -29,7 +32,7 @@
               700: '#7E632B'
             },
             ivory: '#EAE5DC',
-            cashmere: '#A9A49A',
+            cashmere: '#9D978C',
             umber: '#1F1810'
           },
           fontFamily: {
@@ -60,8 +63,8 @@
     }
 
     body {
-      background-color: #070B08;
-      color: #EAE5DC;
+      background-color: #FAF7F2;
+      color: #1A1A1A;
       font-family: var(--font-body);
       overflow-x: hidden;
       selection-background-color: #C5A869;
@@ -69,75 +72,42 @@
       letter-spacing: -0.01em;
     }
 
-    /* Architectural Najdi Pattern Background (Subtle micro-grid) */
-    .najdi-pattern {
-      background-image: radial-gradient(rgba(197, 168, 105, 0.08) 1px, transparent 1px);
-      background-size: 32px 32px;
-      background-position: 0 0;
+    /* Architectural Arch & Pill Shapes */
+    .arch-frame {
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+
+    /* Floating Pill Navigation */
+    .pill-nav {
+      background: rgba(250, 247, 242, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 168, 105, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
     }
 
     /* Refined Architectural Borders & Depth */
     .hairline-gold {
-      border: 1px solid rgba(197, 168, 105, 0.16);
-    }
-    .hairline-gold-hover:hover {
-      border-color: rgba(197, 168, 105, 0.45);
-    }
-
-    .gold-glow {
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(197, 168, 105, 0.15);
-    }
-    .gold-glow-lg {
-      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), 0 0 40px -10px rgba(197, 168, 105, 0.2);
-    }
-
-    .gold-border {
       border: 1px solid rgba(197, 168, 105, 0.2);
     }
-    .gold-border:hover {
-      border-color: rgba(197, 168, 105, 0.5);
-    }
 
-    /* Chamber Entrance Fade */
-    #darkChamber {
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    #darkChamber.chamber-open {
-      opacity: 0;
-      pointer-events: none;
-      transform: scale(1.02);
-    }
-
-    /* Glassmorphism Navigation */
-    .glass-nav {
-      background: rgba(7, 11, 8, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(197, 168, 105, 0.14);
-    }
-
-    /* Refined Champagne Gradient Text */
-    .text-gold-gradient {
-      background: linear-gradient(135deg, #F0E6D2 0%, #C5A869 60%, #9E834D 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Luxury Architectural Card */
     .luxury-card {
-      background: linear-gradient(180deg, rgba(15, 22, 17, 0.75) 0%, rgba(9, 14, 10, 0.9) 100%);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      background: #0C140E;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(197, 168, 105, 0.16);
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.35s ease;
     }
     .luxury-card:hover {
-      border-color: rgba(197, 168, 105, 0.4);
-      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.9), 0 0 30px -10px rgba(197, 168, 105, 0.12);
+      border-color: rgba(197, 168, 105, 0.45);
+      transform: translateY(-3px);
     }
 
     /* Editorial Serif Headings */
     h1, h2, h3, .font-cinzel {
-      letter-spacing: 0.015em;
+      letter-spacing: -0.01em;
       font-feature-settings: "cv01" on, "cv02" on;
     }
 
@@ -307,81 +277,73 @@
 
 <!-- Centerpiece Corporate Identity -->
 <div class="relative z-10 text-center max-w-2xl flex flex-col items-center">
-  <!-- Minimalist Architectural Insignia -->
   <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
-    <div class="absolute inset-0 rounded-2xl border border-gold-500/20"></div>
-    <div class="w-20 h-20 rounded-xl bg-[#0B130E] border border-gold-500/30 p-2.5 shadow-2xl flex items-center justify-center">
+    <div class="w-20 h-20 rounded-2xl bg-[#0C140E] border border-gold-500/30 p-2.5 shadow-2xl flex items-center justify-center">
       <img src="company logo.png" alt="Shahad Alharabi Logo" class="w-full h-full object-contain filter drop-shadow">
     </div>
   </div>
 
-  <!-- Editorial Bilingual Typography -->
-  <h1 class="text-2xl md:text-3xl lg:text-4xl font-cinzel tracking-[0.2em] text-gold-gradient font-semibold uppercase mb-2">
+  <h1 class="text-3xl md:text-4xl lg:text-5xl font-cinzel tracking-[0.05em] text-ivory font-medium mb-3">
     Shahad Alharabi
   </h1>
-  <p class="text-[11px] uppercase tracking-[0.35em] text-cashmere/75 font-jakarta mb-5">
-    Architectural Advertising · Riyadh
+  <p class="text-[11px] uppercase tracking-[0.35em] text-cashmere font-jakarta mb-5">
+    Architectural Advertising &amp; Monumental Stagecraft · Riyadh
   </p>
   <div class="w-12 h-[1px] bg-gold-500/30 my-2"></div>
   <p class="text-xl md:text-2xl font-amiri text-gold-300 font-medium mt-1">
     شركة شهد الحربي للدعاية والإعلان
   </p>
-  <p class="text-xs text-cashmere/60 font-arabicSans mt-1 tracking-wide">
-    الريادة المعمارية في هندسة الشاشات والمنصات الكبرى
-  </p>
 
-  <!-- Clean Architectural Enter Action -->
-  <button onclick="triggerIllumination()" class="mt-10 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500/90 to-gold-600/90 hover:from-gold-400 hover:to-gold-500 text-black font-jakarta font-semibold text-xs uppercase tracking-[0.2em] shadow-lg transition-all hover:scale-[1.02] flex items-center space-x-3 cursor-pointer group">
-    <span class="en-text">Enter Monograph</span>
+  <button onclick="triggerIllumination()" class="mt-10 px-8 py-3.5 rounded-full bg-gold-500 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-[0.18em] shadow-lg transition-all hover:scale-[1.02] flex items-center space-x-3 cursor-pointer group">
+    <span class="en-text">Explore Monograph</span>
     <span class="ar-text hidden font-arabicSans">دخول المنصة الرسمية</span>
     <span class="group-hover:translate-x-1 transition-transform">→</span>
   </button>
-  <p class="text-[10px] text-cashmere/40 mt-3 font-mono tracking-wider">ESTABLISHED IN RIYADH · KINGDOM OF SAUDI ARABIA</p>
 </div>
 </div>
 <!-- Radial Flash Light Overlay -->
 <div class="fixed inset-0 z-40 bg-radial from-amber-100/60 via-gold-500/30 to-transparent mix-blend-screen pointer-events-none opacity-0 transition-opacity duration-500" id="lightFlash"></div>
 <!-- ======================================================= -->
-<!-- MAIN ILLUMINATED APPLICATION CONTAINER                  -->
+<!-- MAIN APPLICATION CONTAINER                              -->
 <!-- ======================================================= -->
-<div class="min-h-screen relative flex flex-col selection:bg-gold-500 selection:text-black" id="illuminatedSite">
-<!-- 1. STICKY GLASSMORPHIC NAVBAR -->
-<header class="sticky top-0 z-30 glass-nav transition-all duration-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<div class="min-h-screen relative flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-gold-500 selection:text-black" id="illuminatedSite">
+
+<!-- 1. FLOATING MODERN PILL NAVBAR -->
+<header class="sticky top-4 z-40 px-4 sm:px-6 max-w-6xl mx-auto w-full">
+<div class="pill-nav rounded-full h-16 px-6 flex items-center justify-between">
 <!-- Brand Signature -->
 <a class="flex items-center space-x-3 rtl:space-x-reverse group" href="#hero">
-<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/30 p-1.5 shadow transition-transform group-hover:scale-105 flex items-center justify-center">
+<div class="w-9 h-9 rounded-full bg-[#0C140E] border border-gold-500/40 p-1.5 shadow flex items-center justify-center">
 <img src="company logo.png" alt="Logo" class="w-full h-full object-contain">
 </div>
 <div class="flex flex-col">
-<span class="font-cinzel text-sm sm:text-base font-bold tracking-widest text-gold-gradient leading-tight">
-              SHAHAD ALHARABI
-            </span>
-<span class="text-[10px] text-cashmere/75 font-jakarta tracking-wider uppercase">
-              Advertising · Riyadh
-            </span>
+<span class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-[#141414] leading-tight">
+  SHAHAD ALHARABI
+</span>
+<span class="text-[9px] text-[#716B61] font-jakarta tracking-wider uppercase">
+  Advertising · Riyadh
+</span>
 </div>
 </a>
 <!-- Desktop Navigation Links -->
-<nav class="hidden md:flex items-center space-x-7 rtl:space-x-reverse text-xs uppercase tracking-widest font-jakarta font-medium text-cashmere">
-<a class="hover:text-gold-300 transition-colors py-1" href="#capabilities">
+<nav class="hidden md:flex items-center space-x-7 rtl:space-x-reverse text-xs uppercase tracking-wider font-jakarta font-semibold text-[#5A544A]">
+<a class="hover:text-gold-600 transition-colors py-1" href="#capabilities">
 <span class="en-text">Capabilities</span>
 <span class="ar-text hidden font-arabicSans">القدرات الهندسية</span>
 </a>
-<a class="hover:text-gold-300 transition-colors py-1" href="#portfolio">
+<a class="hover:text-gold-600 transition-colors py-1" href="#portfolio">
 <span class="en-text">Portfolio</span>
 <span class="ar-text hidden font-arabicSans">المشاريع البارزة</span>
 </a>
-<a class="hover:text-gold-300 transition-colors py-1" href="#lookbook">
+<a class="hover:text-gold-600 transition-colors py-1" href="#lookbook">
 <span class="en-text">Lookbook</span>
 <span class="ar-text hidden font-arabicSans">الملف الرقمي</span>
 </a>
-<a class="hover:text-gold-300 transition-colors py-1" href="#process">
+<a class="hover:text-gold-600 transition-colors py-1" href="#process">
 <span class="en-text">Methodology</span>
 <span class="ar-text hidden font-arabicSans">منهجية العمل</span>
 </a>
-
-<a class="hover:text-gold-300 transition-colors py-1" href="#contact">
+<a class="hover:text-gold-600 transition-colors py-1" href="#contact">
 <span class="en-text">Contact</span>
 <span class="ar-text hidden font-arabicSans">التواصل المباشر</span>
 </a>
@@ -389,95 +351,96 @@
 <!-- Right Side Utility Controls -->
 <div class="flex items-center space-x-3 rtl:space-x-reverse">
 <!-- Language Switcher Button -->
-<button class="px-3.5 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/25 text-gold-300 hover:border-gold-400 text-xs font-medium tracking-wider uppercase transition-all flex items-center space-x-1.5" id="langToggleBtn">
-<span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+<button class="px-3 py-1.5 rounded-full bg-[#ECE5DE] border border-gold-500/25 text-[#3D372F] hover:border-gold-600 text-xs font-semibold tracking-wider uppercase transition-all flex items-center space-x-1.5" id="langToggleBtn">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-600"></span>
 <span id="langLabel">العربية (RTL)</span>
 </button>
 <!-- Direct Proposal Action -->
-<a class="hidden sm:inline-flex px-5 py-2 rounded-full bg-gold-500/90 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-wider transition-all" href="#contact">
+<a class="hidden sm:inline-flex px-5 py-2 rounded-full bg-[#0C140E] hover:bg-black text-[#EAE5DC] hover:text-gold-300 font-jakarta font-semibold text-xs uppercase tracking-wider shadow transition-all" href="#contact">
 <span class="en-text">Request Proposal</span>
 <span class="ar-text hidden font-arabicSans">طلب عرض سعر</span>
 </a>
 </div>
 </div>
 </header>
-<!-- 2. HERO SECTION: MONUMENTAL ARCHITECTURE -->
-<section class="relative pt-16 pb-24 md:pt-24 md:pb-36 overflow-hidden" id="hero">
-<!-- Subtle Architectural Lighting Accents -->
-<div class="absolute top-0 left-1/3 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[180px] pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<!-- Header Tagline -->
-<div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
-<div class="h-[1px] w-8 bg-gold-500/50"></div>
-<span class="text-xs uppercase tracking-[0.25em] text-gold-400/90 font-medium font-jakarta">
-<span class="en-text">Where Light Becomes Luxury</span>
-<span class="ar-text hidden font-arabicSans text-sm">حيث يتحول الضوء إلى فخامة</span>
-</span>
+
+<!-- 2. EDITORIAL HERO SECTION (Warm Arch & Portrait Aesthetic) -->
+<section class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden" id="hero">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Subtitle Pill -->
+<div class="flex items-center space-x-2 rtl:space-x-reverse mb-6">
+  <span class="w-2 h-2 rounded-full bg-gold-600"></span>
+  <span class="text-xs uppercase tracking-[0.25em] text-[#8C6D46] font-semibold font-jakarta">
+    <span class="en-text">Where Light Becomes Luxury · Riyadh</span>
+    <span class="ar-text hidden font-arabicSans text-sm">حيث يتحول الضوء إلى فخامة معمارية</span>
+  </span>
 </div>
-<!-- Master Headline -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+
+<!-- Master Two-Column Arch Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 <div class="lg:col-span-7">
-<h1 class="text-3xl sm:text-5xl lg:text-6xl font-cinzel text-ivory font-medium leading-[1.12] mb-6">
-<span class="en-text">Illuminating Riyadh’s <br/><span class="text-gold-gradient font-semibold">Architectural</span> Renaissance.</span>
-<span class="ar-text hidden font-amiri leading-tight text-4xl sm:text-6xl text-ivory">نُضِيء النهضة المعمارية <br/><span class="text-gold-gradient font-bold">الكبرى في عاصمة المملكة</span></span>
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-cinzel text-[#141414] font-medium leading-[1.05] mb-6">
+<span class="en-text">Illuminating <br/>Riyadh’s <br/><span class="italic font-normal text-gold-600">Architectural</span> <br/>Renaissance.</span>
+<span class="ar-text hidden font-amiri leading-tight text-5xl sm:text-7xl text-[#141414]">نُضِيء النهضة <br/>المعمارية الكبرى <br/><span class="text-gold-600 font-bold">في عاصمة المملكة</span></span>
 </h1>
-<p class="text-base sm:text-lg text-cashmere/90 font-light leading-relaxed mb-10 max-w-xl">
-<span class="en-text">Shahad Alharabi Advertising engineers high-stakes visual environments through the meticulous orchestration of fine-pitch curved LED walls, monumental summit stages, and bespoke architectural signage across the Kingdom.</span>
+<p class="text-base sm:text-lg text-[#5A544A] font-light leading-relaxed mb-8 max-w-xl">
+<span class="en-text">Shahad Alharabi Advertising crafts immersive visual environments for royal summits, curved LED auditoriums, and bespoke architectural landmarks across Saudi Arabia.</span>
 <span class="ar-text hidden font-arabicSans text-sm sm:text-base leading-loose">تُحوّل شركة شهد الحربي للدعاية والإعلان الضوء والمساحة والشاشات الرقمية العملاقة وتجارب الفعاليات الرسمية إلى بيئات بصرية متكاملة تعكس أرقى معايير العمارة السعودية.</span>
 </p>
-<!-- Dual CTAs -->
+
+<!-- Action Buttons -->
 <div class="flex flex-wrap gap-4 items-center mb-12">
-<a class="px-7 py-3.5 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-widest shadow-md transition-all flex items-center space-x-2 rtl:space-x-reverse" href="#portfolio">
+<a class="px-7 py-3.5 rounded-full bg-gold-500 hover:bg-gold-600 text-black font-jakarta font-semibold text-xs uppercase tracking-wider shadow transition-all flex items-center space-x-2 rtl:space-x-reverse" href="#portfolio">
 <span class="en-text">Explore Selected Works</span>
 <span class="ar-text hidden font-arabicSans text-sm">استكشف المشاريع المنفذة</span>
 <span>→</span>
 </a>
-<a class="px-7 py-3.5 rounded-full bg-[#0F1611] hover:bg-neutral-800 text-ivory border border-gold-500/25 hover:border-gold-400 font-jakarta text-xs uppercase tracking-widest transition-all" href="#contact">
-<span class="en-text">Request Proposal</span>
-<span class="ar-text hidden font-arabicSans text-sm">طلب عرض سعر</span>
+<a class="px-7 py-3.5 rounded-full bg-[#ECE5DE] hover:bg-[#E2D8CE] text-[#141414] border border-gold-500/30 font-jakarta text-xs uppercase tracking-wider transition-all font-semibold" href="#lookbook">
+<span class="en-text">View Corporate Lookbook</span>
+<span class="ar-text hidden font-arabicSans text-sm">الكتالوج التعريفي</span>
 </a>
 </div>
-<!-- Refined Architectural Specification Line -->
-<div class="grid grid-cols-3 gap-6 pt-8 border-t border-gold-500/15">
+
+<!-- Clean Metric Counter Strip -->
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-gold-500/25 max-w-md">
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">150+</div>
-<div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
+<div class="text-3xl font-cinzel font-medium text-[#141414]">150+</div>
+<div class="text-[10px] uppercase tracking-wider text-[#716B61] mt-1 font-jakarta font-semibold">
 <span class="en-text">Completed Summits</span>
 <span class="ar-text hidden font-arabicSans">قمة ومؤتمر عالمي</span>
 </div>
 </div>
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">12,000 m²</div>
-<div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
-<span class="en-text">LED Display Modules</span>
+<div class="text-3xl font-cinzel font-medium text-[#141414]">12k m²</div>
+<div class="text-[10px] uppercase tracking-wider text-[#716B61] mt-1 font-jakarta font-semibold">
+<span class="en-text">LED Displays</span>
 <span class="ar-text hidden font-arabicSans">متر مربع شاشات</span>
 </div>
 </div>
 <div>
-<div class="text-2xl sm:text-3xl font-cinzel font-semibold text-gold-300">100%</div>
-<div class="text-[11px] uppercase tracking-wider text-cashmere/70 mt-1 font-jakarta">
+<div class="text-3xl font-cinzel font-medium text-[#141414]">100%</div>
+<div class="text-[10px] uppercase tracking-wider text-[#716B61] mt-1 font-jakarta font-semibold">
 <span class="en-text">Riyadh Standards</span>
-<span class="ar-text hidden font-arabicSans">معايير هندسية معتمدة</span>
+<span class="ar-text hidden font-arabicSans">معايير معتمدة</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Hero Architectural Stage Image Showcase -->
-<div class="lg:col-span-5 relative">
-<div class="relative rounded-2xl overflow-hidden border border-gold-500/25 p-2 bg-[#090E0A] shadow-2xl">
-<!-- Internal Image Frame -->
-<div class="relative h-[440px] rounded-xl overflow-hidden group">
-<img alt="Executive LED Summit Stage in Riyadh" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" src="assets/images/01_Hero_Keynote_Stage.jpeg"/>
+
+<!-- Arch-Framed Showcase Image (Inspired by Reference Portfolio) -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-sm sm:max-w-md">
+<!-- Architectural Arch Backdrop -->
+<div class="absolute -top-4 -right-4 w-full h-full arch-frame bg-gradient-to-tr from-gold-600/30 to-[#C5A869]/20 -z-0"></div>
+<!-- Foreground Image Container -->
+<div class="relative z-10 arch-frame overflow-hidden shadow-2xl border-2 border-gold-500/40 bg-[#0C140E] h-[480px]">
+<img alt="Executive LED Summit Stage in Riyadh" class="w-full h-full object-cover object-center" src="assets/images/01_Hero_Keynote_Stage.jpeg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-<!-- Overlay Card Details -->
-<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#070B08]/85 backdrop-blur border border-gold-500/20">
-<div class="flex justify-between items-center">
-<div>
-<span class="text-[10px] uppercase font-mono text-gold-400/90 tracking-wider">Flagship Execution</span>
-<h4 class="text-sm font-cinzel font-semibold text-ivory">Cityscape &amp; Global Health Summit Stage</h4>
-</div>
-<span class="text-xs font-mono text-cashmere/70">P1.8 Curved Fine-Pitch</span>
-</div>
+<!-- Floating Bottom Badge -->
+<div class="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#0C140E]/90 backdrop-blur border border-gold-500/30 text-white">
+<span class="text-[9px] uppercase font-mono text-gold-400 tracking-wider block">Flagship Venue</span>
+<h4 class="text-xs font-cinzel font-semibold text-[#FAF7F2] truncate">Cityscape &amp; Global Health Summit Stage</h4>
+<span class="text-[10px] font-mono text-cashmere">P1.8 Curved Fine-Pitch · Riyadh</span>
 </div>
 </div>
 </div>
@@ -485,52 +448,58 @@
 </div>
 </div>
 </section>
-<!-- 3. CAPABILITIES / SPATIAL MASTERY -->
-<section class="py-24 bg-[#0A100C] relative border-t border-b border-gold-500/15" id="capabilities">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-16">
-<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
-<span class="en-text">Spatial Mastery &amp; Technical Artistry</span>
-<span class="ar-text hidden font-arabicSans">القدرات التنفيذية والتميز الهندسي</span>
-</p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory">
-<span class="en-text">Engineering Monumental Presences</span>
-<span class="ar-text hidden font-amiri text-4xl sm:text-5xl">هندسة الحضور المعماري والضوئي</span>
-</h2>
-<div class="w-12 h-[1px] bg-gold-500/40 mx-auto mt-4"></div>
+<!-- 3. CAPABILITIES / SPATIAL MASTERY (Editorial Dark Section Inspired by Reference) -->
+<section class="py-24 bg-[#0C140E] text-[#FAF7F2] relative border-t border-b border-gold-500/20" id="capabilities">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header with Two Columns (Reference Style) -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-gold-500/20">
+  <div>
+    <p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2 font-jakarta">
+      <span class="en-text">Services &amp; Architecture</span>
+      <span class="ar-text hidden font-arabicSans">الخدمات والهندسة</span>
+    </p>
+    <h2 class="text-3xl sm:text-5xl font-cinzel font-medium text-white leading-tight">
+      <span class="en-text">What We Engineer <br/>For Riyadh &amp; The Kingdom</span>
+      <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">ما نبتكره وننفذه للمشاريع الكبرى</span>
+    </h2>
+  </div>
+  <p class="text-xs sm:text-sm text-cashmere max-w-md font-light leading-relaxed">
+    From monumental summit stagecraft to fine-pitch curved LED video walls and architectural facade monuments, we deliver turnkey excellence across Saudi Arabia.
+  </p>
 </div>
+
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Service 1: Illuminated Conference Environments -->
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
 <div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
-  <span class="text-2xl font-cinzel font-medium text-gold-400/80">01</span>
-  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Stagecraft</span>
+  <span class="text-2xl font-cinzel font-medium text-gold-400">01</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere">Stagecraft</span>
 </div>
-<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
+<h3 class="text-xl font-cinzel font-semibold text-white mb-3 leading-snug">
 <span class="en-text">Illuminated Conference Environments</span>
 <span class="ar-text hidden font-arabicSans font-bold">بيئات المؤتمرات والقمم الكبرى</span>
 </h3>
-<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
+<p class="text-xs sm:text-sm text-cashmere/90 font-light leading-relaxed mb-6">
 <span class="en-text">Turnkey stagecraft for royal, governmental, and private summits. Broadcast-rated, flicker-free stage lighting with custom acoustic architectural treatments.</span>
 <span class="ar-text hidden font-arabicSans">تصميم وتجهيز منصات المؤتمرات الرسمية والشبه حكومية، إضاءة بث تلفزيوني خالية من الوميض مع دمج متناغم للعناصر الصوتية والمعمارية.</span>
 </p>
-<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere font-mono border-t border-gold-500/15 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>4K Zero-Latency Video Switching</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>IP65 Rigging &amp; Dynamic Trusses</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>Acoustic Wave Dampening</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
+<a class="mt-8 text-xs font-semibold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-1 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
@@ -540,33 +509,33 @@
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
 <div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
-  <span class="text-2xl font-cinzel font-medium text-gold-400/80">02</span>
-  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Display</span>
+  <span class="text-2xl font-cinzel font-medium text-gold-400">02</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere">Display</span>
 </div>
-<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
+<h3 class="text-xl font-cinzel font-semibold text-white mb-3 leading-snug">
 <span class="en-text">Curved LED Display Summits</span>
 <span class="ar-text hidden font-arabicSans font-bold">شاشات LED المنحنية فائقة الدقة</span>
 </h3>
-<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
+<p class="text-xs sm:text-sm text-cashmere/90 font-light leading-relaxed mb-6">
 <span class="en-text">Ultra-fine pitch modules (P1.5 to P2.5) configured into fluid concave and convex geometries, offering immersive pan-optical sightlines for multi-thousand audience auditoriums.</span>
 <span class="ar-text hidden font-arabicSans">شاشات عرض عملاقة بمقاسات دقيقة للغاية من P1.5 حتى P2.5، بتصميمات منحنية مقعرة ومحدبة توفر زوايا رؤية بانورامية متكاملة.</span>
 </p>
-<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere font-mono border-t border-gold-500/15 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>HDR10+ Color Calibration</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>3840Hz High Refresh Rate</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>Seamless Micro-Gap Tolerances</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
+<a class="mt-8 text-xs font-semibold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-1 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
@@ -576,38 +545,41 @@
 <div class="luxury-card rounded-2xl p-8 flex flex-col justify-between group transition-all">
 <div>
 <div class="flex items-center justify-between mb-8 pb-4 border-b border-gold-500/15">
-  <span class="text-2xl font-cinzel font-medium text-gold-400/80">03</span>
-  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere/60">Signage</span>
+  <span class="text-2xl font-cinzel font-medium text-gold-400">03</span>
+  <span class="text-[10px] uppercase font-mono tracking-widest text-cashmere">Signage</span>
 </div>
-<h3 class="text-xl font-cinzel font-semibold text-ivory mb-3 leading-snug">
+<h3 class="text-xl font-cinzel font-semibold text-white mb-3 leading-snug">
 <span class="en-text">Monumental 3D Signage</span>
 <span class="ar-text hidden font-arabicSans font-bold">اللوحات المعمارية ثلاثية الأبعاد</span>
 </h3>
-<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
+<p class="text-xs sm:text-sm text-cashmere/90 font-light leading-relaxed mb-6">
 <span class="en-text">Precision laser-cut stainless steel, brushed brass channel letters, edge-lit acrylics, and structural facade brand markers built to withstand extreme Gulf climate conditions.</span>
 <span class="ar-text hidden font-arabicSans">تصنيع الحروف المجسمة من الفولاذ المقاوم للصدأ والنحاس المصقول والأكريليك المعالج بتقنية IP67 لتحمل أقصى درجات حرارة الصيف في الرياض.</span>
 </p>
-<ul class="text-xs space-y-2.5 text-cashmere/75 font-mono border-t border-gold-500/10 pt-4">
+<ul class="text-xs space-y-2.5 text-cashmere font-mono border-t border-gold-500/15 pt-4">
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>Marine-Grade Brass &amp; Steel</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>IP67 Dust &amp; Thermal Resistance</span>
 </li>
 <li class="flex items-center space-x-2 rtl:space-x-reverse">
-<span class="text-gold-400/80">―</span>
+<span class="text-gold-400">✦</span>
 <span>Internal Halo &amp; Neon Diffusion</span>
 </li>
 </ul>
 </div>
-<a class="mt-8 text-xs font-medium uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-0.5 transition-transform" href="#contact">
+<a class="mt-8 text-xs font-semibold uppercase tracking-wider text-gold-400 hover:text-gold-300 flex items-center space-x-1 rtl:space-x-reverse group-hover:translate-x-1 transition-transform" href="#contact">
 <span class="en-text">Inquire Specifications</span>
 <span class="ar-text hidden font-arabicSans">طلب المواصفات الفنية</span>
 <span>→</span>
 </a>
 </div>
+</div>
+</div>
+</section>
 </div>
 </div>
 </section>
@@ -670,35 +642,35 @@
 </section>
 
 <!-- 5. INTERACTIVE 3D PHOTOBOOK GALLERY (Turnable Picture Book) -->
-<section class="py-24 relative overflow-hidden bg-[#070B08]" id="portfolio">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+<section class="py-24 relative overflow-hidden bg-[#FAF7F2] text-[#1A1A1A] border-b border-gold-500/20" id="portfolio">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header with Reference-Inspired Layout -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
       <div>
-        <p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
-          <span class="en-text">Master Monograph · 3D Gallery</span>
+        <p class="text-xs uppercase tracking-[0.25em] text-[#8C6D46] font-semibold mb-2 font-jakarta">
+          <span class="en-text">Curated Portfolio · 3D Monograph</span>
           <span class="ar-text hidden font-arabicSans">المعرض التفاعلي المصور ثلاثي الأبعاد</span>
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-cinzel font-medium text-ivory">
-          <span class="en-text">The Monumental Photobook</span>
-          <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">سجل الإنجازات المصور</span>
+        <h2 class="text-3xl sm:text-5xl font-cinzel font-medium text-[#141414]">
+          <span class="en-text">Featured Landmark Works</span>
+          <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">سجل الإنجازات والمشاريع البارزة</span>
         </h2>
       </div>
 
       <!-- Book Controls -->
-      <div class="flex items-center space-x-3 rtl:space-x-reverse mt-6 md:mt-0">
-        <button onclick="prevBookSpread()" class="px-4 py-2 rounded-full bg-[#0F1611] border border-gold-500/20 text-gold-300 hover:border-gold-400 font-jakarta text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse" title="Turn backward">
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+        <button onclick="prevBookSpread()" class="px-4 py-2 rounded-full bg-[#ECE5DE] border border-gold-500/30 text-[#141414] hover:bg-[#E0D5CB] font-jakarta text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse font-semibold" title="Turn backward">
           <span>❮</span>
           <span class="en-text">Previous</span>
           <span class="ar-text hidden font-arabicSans">السابق</span>
         </button>
 
-        <div class="px-4 py-2 rounded-full bg-[#090E0A] border border-gold-500/30 text-xs font-mono text-gold-300/90 flex items-center space-x-2">
+        <div class="px-4 py-2 rounded-full bg-[#0C140E] border border-gold-500/30 text-xs font-mono text-gold-300 flex items-center space-x-2">
           <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
           <span id="bookPageIndicator">Spread 1 of 15</span>
         </div>
 
-        <button onclick="nextBookSpread()" class="px-4 py-2 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta text-xs font-semibold uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" title="Turn forward">
+        <button onclick="nextBookSpread()" class="px-4 py-2 rounded-full bg-gold-500 hover:bg-gold-600 text-black font-jakarta text-xs font-semibold uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" title="Turn forward">
           <span class="en-text">Next Page</span>
           <span class="ar-text hidden font-arabicSans">التالي</span>
           <span>❯</span>
@@ -707,13 +679,13 @@
     </div>
 
     <!-- Interaction Hint Bar -->
-    <div class="flex items-center justify-between text-xs font-mono text-cashmere/70 mb-6 px-1">
+    <div class="flex items-center justify-between text-xs font-mono text-[#716B61] mb-6 px-1">
       <span class="flex items-center space-x-2">
-        <span class="text-gold-400/80">✦</span>
+        <span class="text-gold-600">✦</span>
         <span class="en-text">Click right page to turn forward, left page to turn backward.</span>
         <span class="ar-text hidden font-arabicSans">انقر على الصفحة اليمنى للتقدم، أو اليسرى للرجوع مع تأثير تقليب واقعي.</span>
       </span>
-      <span class="hidden sm:inline text-gold-400/70 font-mono text-[11px]">Keyboard: [←] [→] arrow keys</span>
+      <span class="hidden sm:inline text-[#8C6D46] font-mono text-[11px]">Keyboard: [←] [→] arrow keys</span>
     </div>
 
     <!-- 3D BOOK STAGE -->
@@ -743,48 +715,48 @@
 </section>
 
 <!-- 6. INTERACTIVE PDF BROCHURE & LOOKBOOK READER -->
-<section class="py-24 bg-[#0A100C] border-t border-b border-gold-500/15 relative" id="lookbook">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+<section class="py-24 bg-[#0C140E] text-[#FAF7F2] border-t border-b border-gold-500/20 relative" id="lookbook">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-14">
 <!-- Text Information -->
 <div class="lg:w-1/2">
-<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2 font-jakarta">
 <span class="en-text">Official Corporate Literature</span>
 <span class="ar-text hidden font-arabicSans">الملف التعريفي الرسمي الشامل</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory mb-6 leading-tight">
-<span class="en-text">Explore the Complete Corporate Lookbook</span>
+<h2 class="text-3xl sm:text-5xl font-cinzel font-medium text-white mb-6 leading-tight">
+<span class="en-text">The Complete Corporate Lookbook</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">تصفح الكتالوج التعريفي المتكامل</span>
 </h2>
-<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-6">
+<p class="text-xs sm:text-sm text-cashmere font-light leading-relaxed mb-6">
 <span class="en-text">Delve into our comprehensive 10-page master portfolio detailing our corporate engineering standards, structural certifications, royal summit case studies, and complete material fabrication specifications.</span>
 <span class="ar-text hidden font-arabicSans">استعرض الملف التوثيقي الرسمي (10 صفحات) المتضمن كافة الاعتمادات الهندسية للمشاريع الكبرى والمواصفات المعتمدة في المملكة العربية السعودية.</span>
 </p>
 <div class="flex flex-wrap items-center gap-4 mb-8">
-<a class="px-6 py-3 rounded-full bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" download="Shahad-Alharabi-Advertising-Portfolio.pdf" href="SHAHAD-ALHARABI-ADVERTISING.pdf">
+<a class="px-6 py-3 rounded-full bg-gold-500 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-wider transition-all flex items-center space-x-2 rtl:space-x-reverse shadow" download="Shahad-Alharabi-Advertising-Portfolio.pdf" href="SHAHAD-ALHARABI-ADVERTISING.pdf">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 <span class="en-text">Download Official PDF</span>
 <span class="ar-text hidden font-arabicSans">تحميل الملف التعريفي PDF</span>
 </a>
-<span class="text-xs text-cashmere/60 font-mono">14.5 MB · Ultra HD Master</span>
+<span class="text-xs text-cashmere font-mono">14.5 MB · Ultra HD Master</span>
 </div>
 <!-- Page Selector Thumbnails -->
-<div class="border-t border-gold-500/15 pt-6">
-<span class="text-[11px] uppercase font-mono text-cashmere/70 block mb-3">Jump to Document Page:</span>
+<div class="border-t border-gold-500/20 pt-6">
+<span class="text-[11px] uppercase font-mono text-cashmere block mb-3">Jump to Document Page:</span>
 <div class="flex flex-wrap gap-2" id="pdfThumbnails">
 <!-- Javascript will populate or static buttons -->
-<button class="pdf-btn active px-3 py-1.5 rounded-full bg-gold-500 text-black font-mono text-xs font-semibold" onclick="setPdfPage(1)">01</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(2)">02</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(3)">03</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(4)">04</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(5)">05</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(6)">06</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(7)">07</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(8)">08</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(9)">09</button>
-<button class="pdf-btn px-3 py-1.5 rounded-full bg-[#0F1611] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(10)">10</button>
+<button class="pdf-btn active px-3.5 py-1.5 rounded-full bg-gold-500 text-black font-mono text-xs font-semibold" onclick="setPdfPage(1)">01</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(2)">02</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(3)">03</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(4)">04</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(5)">05</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(6)">06</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(7)">07</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(8)">08</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(9)">09</button>
+<button class="pdf-btn px-3.5 py-1.5 rounded-full bg-[#142017] border border-gold-500/20 text-cashmere font-mono text-xs hover:border-gold-400" onclick="setPdfPage(10)">10</button>
 </div>
 </div>
 </div>
@@ -798,7 +770,7 @@
 <button class="px-3 py-1 text-gold-400 hover:text-white font-mono text-xs transition-colors" onclick="prevPdfPage()">
                     ❮ Prev
                   </button>
-<span class="text-xs font-mono text-cashmere/90 tracking-wider" id="pageIndicator">Page 1 of 10</span>
+<span class="text-xs font-mono text-cashmere tracking-wider" id="pageIndicator">Page 1 of 10</span>
 <button class="px-3 py-1 text-gold-400 hover:text-white font-mono text-xs transition-colors" onclick="nextPdfPage()">
                     Next ❯
                   </button>
@@ -809,183 +781,189 @@
 </div>
 </div>
 </section>
+
 <!-- 7. THE CUSTOMER EXPERIENCE: 4-STAGE METHODOLOGY -->
-<section class="py-24 relative bg-[#070B08]" id="process">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-16">
-<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
-<span class="en-text">Precision Execution</span>
-<span class="ar-text hidden font-arabicSans">المعايير المنهجية للتنفيذ</span>
-</p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory">
-<span class="en-text">The Four Pillars of Illumination</span>
-<span class="ar-text hidden font-amiri text-4xl sm:text-5xl">مراحل تحويل الرؤية إلى واقع استثنائي</span>
-</h2>
-<div class="w-12 h-[1px] bg-gold-500/40 mx-auto mt-4"></div>
+<section class="py-24 relative bg-[#FAF7F2] text-[#1A1A1A]" id="process">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-gold-500/20">
+  <div>
+    <p class="text-xs uppercase tracking-[0.25em] text-[#8C6D46] font-semibold mb-2 font-jakarta">
+      <span class="en-text">Precision Execution</span>
+      <span class="ar-text hidden font-arabicSans">المعايير المنهجية للتنفيذ</span>
+    </p>
+    <h2 class="text-3xl sm:text-5xl font-cinzel font-medium text-[#141414]">
+      <span class="en-text">The Four Pillars of Delivery</span>
+      <span class="ar-text hidden font-amiri text-4xl sm:text-5xl">مراحل تحويل الرؤية إلى واقع</span>
+    </h2>
+  </div>
+  <p class="text-xs sm:text-sm text-[#5A544A] max-w-md font-light leading-relaxed">
+    Every project proceeds through structured architectural milestones: from initial acoustic audit to CAD simulation, laser fabrication, and live summit operation.
+  </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <!-- Stage 1 -->
-<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#ECE5DE] border border-gold-500/25 flex flex-col justify-between">
 <div>
-<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">01</span>
-<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-[#8C6D46] block mb-4">01</span>
+<h3 class="text-lg font-cinzel font-semibold text-[#141414] mb-2">
 <span class="en-text">Understand</span>
 <span class="ar-text hidden font-arabicSans font-bold">الفهم والتحليل المعماري</span>
 </h3>
-<p class="text-xs text-cashmere/85 font-light leading-relaxed">
+<p class="text-xs text-[#5A544A] font-light leading-relaxed">
 <span class="en-text">In-depth spatial acoustic analysis, sightline studies, electrical infrastructure audits, and architectural harmony assessments in Riyadh.</span>
 <span class="ar-text hidden font-arabicSans">دراسة المساحة وزوايا الرؤية وخطوط الإمداد الكهربائي لضمان التوافق التام مع البنية التحتية للمبنى أو القاعة.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
-              Audit &amp; Site Survey
-            </div>
+<div class="mt-6 pt-4 border-t border-gold-500/20 text-[11px] font-mono text-[#8C6D46] font-semibold">
+  Audit &amp; Site Survey
+</div>
 </div>
 <!-- Stage 2 -->
-<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#ECE5DE] border border-gold-500/25 flex flex-col justify-between">
 <div>
-<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">02</span>
-<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-[#8C6D46] block mb-4">02</span>
+<h3 class="text-lg font-cinzel font-semibold text-[#141414] mb-2">
 <span class="en-text">Envision</span>
 <span class="ar-text hidden font-arabicSans font-bold">التصور الهندسي ثلاثي الأبعاد</span>
 </h3>
-<p class="text-xs text-cashmere/85 font-light leading-relaxed">
+<p class="text-xs text-[#5A544A] font-light leading-relaxed">
 <span class="en-text">Photorealistic 3D CAD renders, lux level lighting simulations, curvature calculations, and dynamic mockups before manufacturing.</span>
 <span class="ar-text hidden font-arabicSans">إعداد مجسمات ثلاثية الأبعاد ومحاكاة دقيقة لدرجات الإضاءة وانحناءات الشاشات قبل بدء التصنيع الفعلي.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
-              CAD &amp; Lux Simulations
-            </div>
+<div class="mt-6 pt-4 border-t border-gold-500/20 text-[11px] font-mono text-[#8C6D46] font-semibold">
+  CAD &amp; Lux Simulations
+</div>
 </div>
 <!-- Stage 3 -->
-<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#ECE5DE] border border-gold-500/25 flex flex-col justify-between">
 <div>
-<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">03</span>
-<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-[#8C6D46] block mb-4">03</span>
+<h3 class="text-lg font-cinzel font-semibold text-[#141414] mb-2">
 <span class="en-text">Refine</span>
 <span class="ar-text hidden font-arabicSans font-bold">التطوير واختيار المواد</span>
 </h3>
-<p class="text-xs text-cashmere/85 font-light leading-relaxed">
+<p class="text-xs text-[#5A544A] font-light leading-relaxed">
 <span class="en-text">Precision CNC metal fabrication, heat dissipation stress testing, driver calibration, and Saudi civil defense compliance verification.</span>
 <span class="ar-text hidden font-arabicSans">تصنيع المعادن بالليزر، واختبار مقاومة الحرارة واستهلاك الطاقة ومطابقة مواصفات الدفاع المدني السعودي.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
-              Fabrication &amp; Stress Tests
-            </div>
+<div class="mt-6 pt-4 border-t border-gold-500/20 text-[11px] font-mono text-[#8C6D46] font-semibold">
+  Fabrication &amp; Stress Tests
+</div>
 </div>
 <!-- Stage 4 -->
-<div class="p-8 rounded-2xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+<div class="p-8 rounded-2xl bg-[#ECE5DE] border border-gold-500/25 flex flex-col justify-between">
 <div>
-<span class="text-3xl font-cinzel font-medium text-gold-500/40 block mb-4">04</span>
-<h3 class="text-lg font-cinzel font-semibold text-ivory mb-2">
+<span class="text-3xl font-cinzel font-medium text-[#8C6D46] block mb-4">04</span>
+<h3 class="text-lg font-cinzel font-semibold text-[#141414] mb-2">
 <span class="en-text">Collaborate</span>
 <span class="ar-text hidden font-arabicSans font-bold">التنفيذ الميداني والدعم</span>
 </h3>
-<p class="text-xs text-cashmere/85 font-light leading-relaxed">
+<p class="text-xs text-[#5A544A] font-light leading-relaxed">
 <span class="en-text">On-site structural installation by certified engineers, live summit operation, and continuous 24/7 technical guardianship.</span>
 <span class="ar-text hidden font-arabicSans">تركيب ميداني بمعايير سلامة صارمة بإشراف مهندسين متخصصين مع إدارة فنية مباشرة طيلة مدة الحدث.</span>
 </p>
 </div>
-<div class="mt-6 pt-4 border-t border-gold-500/10 text-[11px] font-mono text-gold-400/80">
-              Turnkey Commissioning
-            </div>
+<div class="mt-6 pt-4 border-t border-gold-500/20 text-[11px] font-mono text-[#8C6D46] font-semibold">
+  Turnkey Commissioning
+</div>
 </div>
 </div>
 </div>
 </section>
-<!-- 9. CONTACT, HEADQUARTERS & RIYADH LOCATION HUB -->
-<section class="py-24 relative bg-[#070B08]" id="contact">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
+<!-- 9. CONTACT, HEADQUARTERS & RIYADH LOCATION HUB (Clean Split Card Style) -->
+<section class="py-24 relative bg-[#0C140E] text-[#FAF7F2] border-t border-gold-500/20" id="contact">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
 <!-- Contact Direct Information -->
 <div class="lg:col-span-5">
-<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-medium mb-2 font-jakarta">
+<p class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2 font-jakarta">
 <span class="en-text">Direct Inquiries</span>
 <span class="ar-text hidden font-arabicSans">التواصل المباشر والاستفسارات</span>
 </p>
-<h2 class="text-3xl sm:text-4xl font-cinzel font-medium text-ivory mb-6 leading-tight">
-<span class="en-text">Let Us Illuminate Your Next Landmark.</span>
+<h2 class="text-3xl sm:text-5xl font-cinzel font-medium text-white mb-6 leading-tight">
+<span class="en-text">Let’s Create Something Monumental.</span>
 <span class="ar-text hidden font-amiri text-4xl sm:text-5xl leading-tight">لنبدأ في إضاءة مشروعكم المعماري القادم.</span>
 </h2>
-<p class="text-sm text-cashmere/85 font-light leading-relaxed mb-8">
+<p class="text-xs sm:text-sm text-cashmere font-light leading-relaxed mb-8">
 <span class="en-text">Contact our Riyadh corporate headquarters directly for tender submittals, stagecraft consulting, and architectural lighting specifications.</span>
 <span class="ar-text hidden font-arabicSans">تواصل مباشرة مع المقر الرئيسي بالرياض لتنسيق المناقصات والمواصفات المعمارية ودراسات المشاريع الخاصة.</span>
 </p>
 <!-- Direct Channel Links -->
 <div class="space-y-4">
 <!-- Location Card -->
-<div class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 flex items-start space-x-3 rtl:space-x-reverse">
-<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+<div class="p-4 rounded-2xl bg-[#142017] border border-gold-500/20 flex items-start space-x-3.5 rtl:space-x-reverse">
+<div class="w-10 h-10 rounded-xl bg-[#0C140E] border border-gold-500/25 text-gold-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-[11px] uppercase font-mono text-gold-400/90 tracking-wider">Riyadh Headquarters</h4>
-<p class="text-xs text-ivory mt-0.5 font-light">Building No. 3851, Al Zubdani Street, As Salhiya Dist., Riyadh-12662, Saudi Arabia</p>
-<p class="text-xs text-cashmere/70 font-arabicSans mt-0.5">مبنى 3851، شارع الزبداني، حي الصالحية، الرياض 12662</p>
+<h4 class="text-[11px] uppercase font-mono text-gold-400 tracking-wider">Riyadh Headquarters</h4>
+<p class="text-xs text-[#FAF7F2] mt-0.5 font-light">Building No. 3851, Al Zubdani Street, As Salhiya Dist., Riyadh-12662, Saudi Arabia</p>
+<p class="text-xs text-cashmere font-arabicSans mt-0.5">مبنى 3851، شارع الزبداني، حي الصالحية، الرياض 12662</p>
 </div>
 </div>
 <!-- Phone & WhatsApp Card -->
-<a class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://wa.me/966502958759" target="_blank">
-<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+<a class="p-4 rounded-2xl bg-[#142017] border border-gold-500/20 hover:border-gold-400/50 transition-all flex items-center space-x-3.5 rtl:space-x-reverse block group" href="https://wa.me/966502958759" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-[#0C140E] border border-gold-500/25 text-emerald-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.63c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-[11px] uppercase font-mono text-cashmere/70">Phone &amp; WhatsApp Support</h4>
+<h4 class="text-[11px] uppercase font-mono text-cashmere">Direct WhatsApp &amp; Mobile</h4>
 <p class="text-sm font-semibold text-gold-300 group-hover:text-gold-200 mt-0.5">+966 50 295 8759</p>
 </div>
 </a>
 <!-- Email Card -->
-<a class="p-4 rounded-xl bg-[#0B130E] border border-gold-500/15 hover:border-gold-500/40 transition-all flex items-center space-x-3 rtl:space-x-reverse block group" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shahadalharbiadvt.com&su=Inquiry%20regarding%20Advertising%20%26%20Stage%20Architecture" target="_blank" rel="noopener noreferrer">
-<div class="w-10 h-10 rounded-lg bg-[#0F1611] border border-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+<a class="p-4 rounded-2xl bg-[#142017] border border-gold-500/20 hover:border-gold-400/50 transition-all flex items-center space-x-3.5 rtl:space-x-reverse block group" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shahadalharbiadvt.com&su=Inquiry%20regarding%20Advertising%20%26%20Stage%20Architecture" target="_blank" rel="noopener noreferrer">
+<div class="w-10 h-10 rounded-xl bg-[#0C140E] border border-gold-500/25 text-gold-400 flex items-center justify-center shrink-0">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
 <div>
-<h4 class="text-[11px] uppercase font-mono text-cashmere/70">Official Correspondence</h4>
-<p class="text-sm font-semibold text-ivory group-hover:text-gold-300 mt-0.5">info@shahadalharbiadvt.com</p>
+<h4 class="text-[11px] uppercase font-mono text-cashmere">Official Correspondence</h4>
+<p class="text-sm font-semibold text-white group-hover:text-gold-300 mt-0.5">info@shahadalharbiadvt.com</p>
 </div>
 </a>
 </div>
 </div>
 <!-- Interactive Inquiry Form -->
 <div class="lg:col-span-7">
-<div class="luxury-card rounded-2xl p-8 border border-gold-500/20">
-<h3 class="text-xl font-cinzel font-medium text-ivory mb-2">Initiate Tender or Proposal</h3>
-<p class="text-xs text-cashmere/70 mb-6 font-light">Our technical directors review and acknowledge requests within 4 operational hours.</p>
+<div class="luxury-card rounded-3xl p-8 sm:p-10 border border-gold-500/25 bg-[#0C140E]">
+<h3 class="text-2xl font-cinzel font-medium text-white mb-2">Initiate Tender or Proposal</h3>
+<p class="text-xs text-cashmere mb-6 font-light">Our technical directors review and acknowledge requests within 4 operational hours.</p>
 <form class="space-y-4" id="inquiryForm" onsubmit="handleFormSubmit(event)">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
-<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Your Full Name</label>
-<input id="inqName" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Eng. Khalid Al-Otaibi" required="" type="text"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere mb-1.5">Your Full Name</label>
+<input id="inqName" class="w-full p-3.5 rounded-xl bg-[#08100A] border border-gold-500/20 text-[#FAF7F2] text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Eng. Khalid Al-Otaibi" required="" type="text"/>
 </div>
 <div>
-<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Company / Entity</label>
-<input id="inqCompany" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Riyadh Development Authority" required="" type="text"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere mb-1.5">Company / Entity</label>
+<input id="inqCompany" class="w-full p-3.5 rounded-xl bg-[#08100A] border border-gold-500/20 text-[#FAF7F2] text-xs focus:border-gold-400 outline-none transition-colors" placeholder="e.g. Riyadh Development Authority" required="" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
-<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Email Address</label>
-<input id="inqEmail" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="name@domain.com" required="" type="email"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere mb-1.5">Email Address</label>
+<input id="inqEmail" class="w-full p-3.5 rounded-xl bg-[#08100A] border border-gold-500/20 text-[#FAF7F2] text-xs focus:border-gold-400 outline-none transition-colors" placeholder="name@domain.com" required="" type="email"/>
 </div>
 <div>
-<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Phone Number</label>
-<input id="inqPhone" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
+<label class="block text-[11px] uppercase font-mono text-cashmere mb-1.5">Phone Number</label>
+<input id="inqPhone" class="w-full p-3.5 rounded-xl bg-[#08100A] border border-gold-500/20 text-[#FAF7F2] text-xs focus:border-gold-400 outline-none transition-colors" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
 </div>
 </div>
 <div>
-<label class="block text-[11px] uppercase font-mono text-cashmere/80 mb-1.5">Scope of Requirements</label>
-<textarea id="inqScope" class="w-full p-3.5 rounded-xl bg-[#080E0A] border border-gold-500/20 text-ivory text-xs focus:border-gold-400 outline-none transition-colors" placeholder="Describe your venue, stage dimensions, timeline, or signage requirements..." required="" rows="4"></textarea>
+<label class="block text-[11px] uppercase font-mono text-cashmere mb-1.5">Scope of Requirements</label>
+<textarea id="inqScope" class="w-full p-3.5 rounded-xl bg-[#08100A] border border-gold-500/20 text-[#FAF7F2] text-xs focus:border-gold-400 outline-none transition-colors" placeholder="Describe your venue, stage dimensions, timeline, or signage requirements..." required="" rows="4"></textarea>
 </div>
-<button class="w-full py-4 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-widest shadow transition-all cursor-pointer" id="submitBtn" type="submit">
+<button class="w-full py-4 rounded-xl bg-gold-500 hover:bg-gold-600 text-black font-jakarta font-semibold text-xs uppercase tracking-widest shadow transition-all cursor-pointer" id="submitBtn" type="submit">
                   Submit Formal Inquiry · إرسال الطلب الرسمي
                 </button>
 </form>
@@ -995,15 +973,15 @@
 </div>
 </section>
 <!-- FOOTER -->
-<footer class="py-12 bg-[#040608] border-t border-neutral-900 text-xs text-cashmere/60 font-jakarta">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<footer class="py-12 bg-[#060A07] border-t border-gold-500/15 text-xs text-cashmere font-jakarta">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
 <div class="flex items-center space-x-3 rtl:space-x-reverse">
 <span class="font-cinzel text-sm text-gold-400 font-bold tracking-widest">SHAHAD ALHARABI</span>
 <span>|</span>
 <span class="font-amiri text-sm text-gold-300">شركة شهد الحربي للدعاية والإعلان</span>
 </div>
 <p>© 2025 Shahad Alharabi Advertising. All Rights Reserved. Riyadh, Kingdom of Saudi Arabia.</p>
-<div class="flex space-x-4 rtl:space-x-reverse text-gold-400">
+<div class="flex space-x-4 rtl:space-x-reverse text-gold-400 font-semibold">
 <a class="hover:underline" href="#hero">Top ↑</a>
 <a class="hover:underline" href="https://wa.me/966502958759" target="_blank">WhatsApp</a>
 </div>
