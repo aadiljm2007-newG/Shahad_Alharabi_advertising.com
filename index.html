@@ -94,6 +94,17 @@
       border: 1px solid rgba(197, 168, 105, 0.2);
     }
 
+    /* Chamber Entrance Fade */
+    #darkChamber {
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #darkChamber.chamber-open {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      transform: scale(1.03);
+    }
+
     .luxury-card {
       background: #0C140E;
       box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
@@ -266,43 +277,7 @@
 
   </style>
 </head>
-<body class="bg-obsidian text-ivory antialiased selection:bg-gold-500 selection:text-black">
-<!-- ======================================================= -->
-<!-- 1. SIGNATURE LANDING EXPERIENCE: THE MONOGRAPH ENTRANCE -->
-<!-- ======================================================= -->
-<div class="fixed inset-0 z-50 bg-[#070B08] flex flex-col items-center justify-center p-6 select-none overflow-hidden transition-all duration-700" id="darkChamber">
-<!-- Subtle Ambient Background -->
-<div class="absolute inset-0 najdi-pattern opacity-40 pointer-events-none"></div>
-<div class="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 blur-[160px] pointer-events-none"></div>
-
-<!-- Centerpiece Corporate Identity -->
-<div class="relative z-10 text-center max-w-2xl flex flex-col items-center">
-  <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
-    <div class="w-20 h-20 rounded-2xl bg-[#0C140E] border border-gold-500/30 p-2.5 shadow-2xl flex items-center justify-center">
-      <img src="company logo.png" alt="Shahad Alharabi Logo" class="w-full h-full object-contain filter drop-shadow">
-    </div>
-  </div>
-
-  <h1 class="text-3xl md:text-4xl lg:text-5xl font-cinzel tracking-[0.05em] text-ivory font-medium mb-3">
-    Shahad Alharabi
-  </h1>
-  <p class="text-[11px] uppercase tracking-[0.35em] text-cashmere font-jakarta mb-5">
-    Architectural Advertising &amp; Monumental Stagecraft · Riyadh
-  </p>
-  <div class="w-12 h-[1px] bg-gold-500/30 my-2"></div>
-  <p class="text-xl md:text-2xl font-amiri text-gold-300 font-medium mt-1">
-    شركة شهد الحربي للدعاية والإعلان
-  </p>
-
-  <button onclick="triggerIllumination()" class="mt-10 px-8 py-3.5 rounded-full bg-gold-500 hover:bg-gold-400 text-black font-jakarta font-semibold text-xs uppercase tracking-[0.18em] shadow-lg transition-all hover:scale-[1.02] flex items-center space-x-3 cursor-pointer group">
-    <span class="en-text">Explore Monograph</span>
-    <span class="ar-text hidden font-arabicSans">دخول المنصة الرسمية</span>
-    <span class="group-hover:translate-x-1 transition-transform">→</span>
-  </button>
-</div>
-</div>
-<!-- Radial Flash Light Overlay -->
-<div class="fixed inset-0 z-40 bg-radial from-amber-100/60 via-gold-500/30 to-transparent mix-blend-screen pointer-events-none opacity-0 transition-opacity duration-500" id="lightFlash"></div>
+<body class="bg-[#FAF7F2] text-[#1A1A1A] antialiased selection:bg-gold-500 selection:text-black">
 <!-- ======================================================= -->
 <!-- MAIN APPLICATION CONTAINER                              -->
 <!-- ======================================================= -->
