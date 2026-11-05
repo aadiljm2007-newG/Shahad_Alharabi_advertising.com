@@ -96,13 +96,25 @@
 
     /* Chamber Entrance Fade */
     #darkChamber {
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
     }
     #darkChamber.chamber-open {
       opacity: 0 !important;
       pointer-events: none !important;
       visibility: hidden !important;
-      transform: scale(1.03);
+      transform: scale(1.05);
+    }
+
+    /* Tactile Pull Cord Animations */
+    .cord-line {
+      stroke: url(#cordGrad);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
+    }
+    
+    .spring-bounce {
+      transition: transform 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .luxury-card {
@@ -278,6 +290,92 @@
   </style>
 </head>
 <body class="bg-[#FAF7F2] text-[#1A1A1A] antialiased selection:bg-gold-500 selection:text-black">
+<!-- ======================================================= -->
+<!-- 1. SIGNATURE LANDING EXPERIENCE: TACTILE PULL-CORD      -->
+<!-- ======================================================= -->
+<div class="fixed inset-0 z-50 bg-[#06080A] flex flex-col items-center justify-center p-6 select-none overflow-hidden transition-all duration-700" id="darkChamber">
+<!-- Subtle Ambient Background -->
+<div class="absolute inset-0 najdi-pattern opacity-40 pointer-events-none"></div>
+<div class="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 blur-[160px] pointer-events-none"></div>
+
+<!-- Centerpiece Corporate Identity -->
+<div class="relative z-10 text-center max-w-2xl flex flex-col items-center">
+  <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
+    <div class="w-20 h-20 rounded-2xl bg-[#0C140E] border border-gold-500/40 p-2.5 shadow-2xl flex items-center justify-center">
+      <img src="company logo.png" alt="Shahad Alharabi Logo" class="w-full h-full object-contain filter drop-shadow">
+    </div>
+  </div>
+
+  <h1 class="text-3xl md:text-5xl font-cinzel tracking-[0.05em] text-[#EAE5DC] font-medium mb-3">
+    Shahad Alharabi
+  </h1>
+  <p class="text-[11px] uppercase tracking-[0.35em] text-[#9D978C] font-jakarta mb-5">
+    Architectural Advertising &amp; Monumental Stagecraft · Riyadh
+  </p>
+  <div class="w-12 h-[1px] bg-gold-500/30 my-2"></div>
+  <p class="text-xl md:text-2xl font-amiri text-gold-300 font-medium mt-1">
+    شركة شهد الحربي للدعاية والإعلان
+  </p>
+  <p class="text-xs text-[#9D978C]/70 font-arabicSans mt-1">
+    حيث يتحول الضوء إلى فخامة معمارية
+  </p>
+</div>
+
+<!-- The Golden Hanging Pull-Cord / Chain -->
+<div class="absolute top-0 right-10 sm:right-24 md:right-32 lg:right-40 z-30 flex flex-col items-center cursor-pointer group" id="pullCordWrapper" onclick="triggerIllumination()">
+  <!-- Chain Mount -->
+  <div class="w-6 h-3 bg-gradient-to-b from-neutral-700 to-gold-700 rounded-b shadow-lg border-b border-gold-400/50"></div>
+  <!-- Interactive SVG Chain & Tassel -->
+  <svg class="overflow-visible spring-bounce" height="260" id="chainSvg" viewbox="0 0 48 260" width="48">
+  <defs>
+  <lineargradient id="cordGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+  <stop offset="0%" stop-color="#AA8820"></stop>
+  <stop offset="50%" stop-color="#FFE885"></stop>
+  <stop offset="100%" stop-color="#8C6D46"></stop>
+  </lineargradient>
+  <filter height="140%" id="goldShine" width="140%" x="-20%" y="-20%">
+  <fedropshadow dx="0" dy="2" flood-color="#D4AF37" flood-opacity="0.6" stddeviation="4"></fedropshadow>
+  </filter>
+  </defs>
+  <!-- Chain links -->
+  <g fill="none" stroke="url(#cordGrad)" stroke-width="2">
+  <ellipse cx="24" cy="15" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="27" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="39" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="51" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="63" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="75" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="87" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="99" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="111" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="123" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="135" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="147" rx="3.5" ry="6"></ellipse>
+  <ellipse cx="24" cy="159" rx="3.5" ry="6"></ellipse>
+  </g>
+  <!-- Brass Connector & Ornate Tassel Weight -->
+  <g filter="url(#goldShine)" id="pullHandle">
+  <path d="M16 172 L32 172 L28 184 L20 184 Z" fill="url(#cordGrad)"></path>
+  <polygon fill="url(#cordGrad)" points="24,186 34,204 24,228 14,204"></polygon>
+  <circle cx="24" cy="204" fill="#FFF8DC" r="3"></circle>
+  <line stroke="#AA8820" stroke-width="1.5" x1="20" x2="18" y1="228" y2="246"></line>
+  <line stroke="#FFE885" stroke-width="2" x1="24" x2="24" y1="228" y2="252"></line>
+  <line stroke="#8C6D46" stroke-width="1.5" x1="28" x2="30" y1="228" y2="246"></line>
+  </g>
+  </svg>
+  <!-- Pulsing Hint Note -->
+  <div class="mt-4 flex flex-col items-center text-center transition-transform group-hover:scale-105">
+  <div class="flex items-center space-x-1.5 text-[11px] font-jakarta tracking-widest text-gold-400 uppercase bg-black/80 px-3.5 py-1.5 rounded-full border border-gold-500/40 backdrop-blur shadow-lg">
+  <span class="animate-bounce">↓</span>
+  <span class="en-text">Pull to illuminate</span>
+  <span class="ar-text hidden">اسحب الضوء للتشغيل</span>
+  </div>
+  <p class="text-[10px] text-cashmere/50 mt-1 font-mono tracking-tight">Interactive Lighting Trigger</p>
+  </div>
+</div>
+</div>
+<!-- Radial Flash Light Overlay -->
+<div class="fixed inset-0 z-40 bg-radial from-amber-100 via-gold-400/80 to-transparent mix-blend-screen pointer-events-none opacity-0 transition-opacity duration-500" id="lightFlash"></div>
 <!-- ======================================================= -->
 <!-- MAIN APPLICATION CONTAINER                              -->
 <!-- ======================================================= -->
@@ -1049,17 +1147,31 @@
 <!-- JAVASCRIPT CONTROLLERS                                   -->
 <!-- ======================================================= -->
 <script>
-    // 1. MONOGRAPH ENTRANCE LOGIC
+    // 1. TACTILE PULL-CORD PHYSICS & ILLUMINATION LOGIC
+    const pullCord = document.getElementById('pullCordWrapper');
+    const chainSvg = document.getElementById('chainSvg');
     const darkChamber = document.getElementById('darkChamber');
     const lightFlash = document.getElementById('lightFlash');
 
     function triggerIllumination() {
-      if (!darkChamber) return;
-      lightFlash.style.opacity = '0.6';
-      darkChamber.classList.add('chamber-open');
+      if (!darkChamber || !chainSvg) return;
+      // Spring bounce down
+      chainSvg.style.transform = 'translateY(55px)';
+      
       setTimeout(() => {
-        lightFlash.style.opacity = '0';
-      }, 400);
+        // Light flash burst
+        lightFlash.style.opacity = '1';
+        // Chain bounce back
+        chainSvg.style.transform = 'translateY(0px)';
+        
+        setTimeout(() => {
+          // Open dark chamber
+          darkChamber.classList.add('chamber-open');
+          setTimeout(() => {
+            lightFlash.style.opacity = '0';
+          }, 350);
+        }, 180);
+      }, 200);
     }
 
     // 2. BILINGUAL RTL / LTR ENGINE
